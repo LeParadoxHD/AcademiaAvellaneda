@@ -84,7 +84,8 @@
 						<label class="required" for="password">Contraseña:</label>
 							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
 						<label class="required" for="password2">Repetir contraseña:</label>
-							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" required maxlength="20"><br>
+							<span id="passerror"></span>
 							<input type="hidden" id="textFile" value="Contraseña cifrada">
 					</div>
 					<hr class="y1">

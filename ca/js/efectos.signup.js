@@ -57,6 +57,19 @@ function signup() {
 	location.href="index.html";
 }
 
+$(document).ready(function() {
+	$("#password2").bind("keyup", function () {
+		var pass = $("#password").attr("value");
+		var retypepass = $("#password2").attr("value");
+		
+		if(pass == retypepass){
+			$("#passerror").html("Contraseñas coinciden").css({"color":"green"});
+		} else {
+			$("#passerror").html("Contraseñas no coinciden").css({"color":"red"});
+		}
+	});
+});
+
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });
 $('#born_month').autotab({ format: 'alphanumeric', target: '#born_year', previous: '#born_day' });
 $('#born_year').autotab({ format: 'alphanumeric', previous: '#born_month' });

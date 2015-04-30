@@ -38,7 +38,7 @@
 						<label for="last_name">Apellidos:</label>
 							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
 						<label class="required" for="dni">DNI:</label>
-							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" title="Inserta tu DNI.Ej 47293029T" required maxlength="9"><br>
+							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" required maxlength="9"><br>
 					</div>
 					<hr class="y1">
 					<div class="float_right" id="first_class">
@@ -82,9 +82,10 @@
 						<label class="required" for="user">Nombre de usuario:</label>
 							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
 						<label class="required" for="password">Contraseña:</label>
-							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
+							<input type="password" name="password" pattern="{8,}"  id="password" value="" required maxlength="20"><br>
 						<label class="required" for="password2">Repetir contraseña:</label>
-							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" required maxlength="20"><br>
+							<span id="passerror"></span>
 							<input type="hidden" id="textFile" value="Contraseña cifrada">
 					</div>
 					<hr class="y1">
