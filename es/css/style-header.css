@@ -29,6 +29,8 @@ body {
 	margin: 0 auto;
 	margin-top: 70px;
 	text-align: center;
+	-webkit-transition: background-image 0.5s ease-in-out;
+	transition: background-image 0.5s ease-in-out;
 }
 
 /* Formateando la barra de navegación */

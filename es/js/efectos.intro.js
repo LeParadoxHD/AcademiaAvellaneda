@@ -1,4 +1,18 @@
 
+var introduction = $.cookie('intro');
+var language = $.cookie('lang');
+if (introduction === '1') {
+	if (language === 'es') {
+		location.href="es/index.html";
+	}
+	if (language === 'ca') {
+		location.href="ca/index.html";
+	}
+	if (language === 'en') {
+		location.href="en/index.html";
+	}
+} else {
+
 var archivo = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 var subarchivo = window.location.href.substring(window.location.href.lastIndexOf("#") + 1);
 
@@ -34,6 +48,7 @@ setTimeout(function(){
 	$('#bar').css("width", "10px");
 },2000);
 $(document).ready(function() {
+	$.cookie('intro', '1', { expires: 1, domain: 'consultoriamassaguer.es' });
 	$('.spanish').addClass("selected");
 	window.idioma="es/";
 	setTimeout(function(){
@@ -177,20 +192,25 @@ $('.english').click(function() {
 	$('.lang').removeClass("selected");
 	$('.english').addClass("selected");
 	window.idioma="en/";
+	$.cookie('lang', 'en', { expires: 1, domain: 'consultoriamassaguer.es' });
 });
 
 $('.spanish').click(function() {
 	$('.lang').removeClass("selected");
 	$('.spanish').addClass("selected");
 	window.idioma="es/";
+	$.cookie('lang', 'es', { expires: 1, domain: 'consultoriamassaguer.es' });
 });
 
 $('.catalan').click(function() {
 	$('.lang').removeClass("selected");
 	$('.catalan').addClass("selected");
 	window.idioma="ca/";
+	$.cookie('lang', 'ca', { expires: 1, domain: 'consultoriamassaguer.es' });
 });
 
 setTimeout(function(){
 	location.href = idioma + "index.html";
 },14000);
+
+}

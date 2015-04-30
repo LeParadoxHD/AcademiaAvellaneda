@@ -284,6 +284,29 @@ if (archivo === 'curses.html') {
 	}, 4000);
 }
 
+$('#off').text("Power Off");
+$('#on').text("Power On");
+$('#on').css("display", "none");
+
+function switchoff() {
+	$('#switch_circle').css("left", "20px");
+	$('.switch').attr('onclick','switchon()');
+	$('body').css("background", "#1C1C1C");
+	$('.switch').css('background','green');
+	$('#off').fadeToggle(300);
+	$('#on').fadeToggle(300);
+	$('#off').css("display", "none");
+};
+
+function switchon() {
+	$('#switch_circle').css("left", "0px");
+	$('.switch').attr('onclick','switchoff()');
+	$('body').css('background-image', 'url(img/texture_grain.png)');
+	$('.switch').css('background','#484747');
+	$('#on').fadeToggle(300);
+	$('#off').fadeToggle(300);
+};
+
 //
 //if(typeof username === 'undefined'){
   //document.getElementById("user_active").style.display = "none";
