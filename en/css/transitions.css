@@ -1,0 +1,59 @@
+
+/* Pre-Formteando estilos de los elementos de la web,
+	solo tiene como fin las transiciones al cargar la web*/
+
+div#body_form { /* -2000px */
+	margin-left: -3000px;
+	transition: all 3s ease;
+	-moz-transition: all 3s ease;
+	-webkit-transition: all 3s ease;
+}
+
+div#right_menu {
+	transition: all 3s ease;
+	-moz-transition: all 3s ease;
+	-webkit-transition: all 3s ease;
+}
+
+div#second_content {
+	margin-left: -2000px;
+	transition: all 3.5s ease;
+	-moz-transition: all 3.5s ease;
+	-webkit-transition: all 3.5s ease;
+}
+
+div#third_content {
+	margin-left: -3800px;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+	-webkit-transition: all 4s ease;
+}
+
+div#main_bar{
+	top: -400px;
+	transition: all 1.3s ease;
+	-moz-transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+	position: relative;
+}
+
+div#help_widget {
+	top: -1000px;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+	-webkit-transition: all 4s ease;
+}
+
+div#container_widget {
+	margin-left: -50px;
+	transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+}
+
+footer#copyright {
+	transition: all 3s ease;
+	-moz-transition: all 3s ease;
+	transition: all 3s ease;
+	position: relative;
+}

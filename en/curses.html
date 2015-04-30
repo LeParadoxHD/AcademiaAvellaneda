@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- LITE
+		<link rel="stylesheet" type="text/css" href="css/lite.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/style-header.css">
+		<link rel="stylesheet" type="text/css" href="css/style-body.css">
+		<link rel="stylesheet" type="text/css" href="css/style-right-menu.css">
+		<link rel="stylesheet" type="text/css" href="css/style-footer.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/media-queries.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/transitions.css">
+		<link rel="shortcut icon" href="img/favicon.png">
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<!-- Librería de contenidos dinámicos de Google (SPA) -->
+		<script src="js/angular.min.js"></script>
+		<!-- Cookies -->
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<title>Avellaneda Academy - Curses</title>
+	</head>
+	<body>
+	<div id="hashtag"><a class="twitter-timeline" href="https://twitter.com/hashtag/videojuegos" data-widget-id="586488697404665856">Tweets about #videojuegos</a></div>
+	<!-- Menú Horizontal de otros proyectos y redes sociales -->
+	<div id="projects">
+		<div id="container_projects">
+			<ul>
+				<li><a><b>Other projects:</b></a></li>
+				<li><img src="img/dash.png" alt="dash-previews"><a id="massaguer" href="http://www.consultoriamassaguer.es/" target="blank">Massaguer Consultancy</a></li>
+				<li><img src="img/dash.png" alt="dash-previews"><a id="plumb" href="http://david.consultoriamassaguer.es/" target="blank">Plumb Constructions</a></li>
+				<li>
+					<img src="img/dash.png" alt="dash">
+					<img alt="top-logo" src="img/top-logo.png">
+					<div id="square">
+					</div>
+				</li>
+				<li>
+					<a class="less_margin_left" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/academia.InformaUberlandia" title="No es la real" target="_blank"><img alt="fbshare" src="img/facebook-share.png"></a>
+				</li>
+				<li>
+					<img src="img/dash.png" alt="dash-share"><a class="less_margin_left" href="https://twitter.com/home?status=%40etsii%20Me%20apunto%20a%20la%20Acad%C3%A9mia%20Avellaneda!" target="blank"><img alt="tweet" src="img/tweet.png"></a>
+				</li>
+				<li>
+					<img src="img/dash.png" alt="dash-share"><a class="less_margin_left" href="https://plus.google.com/106429748600150466310?prsrc=5" target="blank"><img alt="googleplus" src="img/googleplus.png"></a>
+				</li>
+				<li id="menu">
+					<img src="img/dash.png" alt="dash-twits">
+					<span>TWITS</span>
+				</li>
+			</ul>
+			<div id="previews">
+				<img id="massaguerp" alt="massaguer-preview" src="img/massaguer-preview.png">
+				<img id="plumbp" alt="plumb-preview" src="img/plumb-preview.png">
+			</div>
+		</div>
+	</div>
+	<!-- Widget Social -->
+	<div id="container_widget">
+		<a target="blank" title="Facebook" href="https://www.facebook.com/massaguer"><img src="img/facebook_icon.png" alt="facebook" class="social"></a>
+		<a target="blank" title="Twitter" href="https://www.twitter.com/massaguer"><img src="img/twitter_icon.png" alt="twitter" class="social"></a>
+		<a target="blank" title="Google+" href="https://plus.google.com/massaguer"><img src="img/google_icon.png" alt="google" class="social"></a>
+	</div>
+	<!-- Navigation for PC -->
+	<header id="web">
+		<!-- Client Logo -->
+			<img id="logo1" class="logo" alt="logo" src="img/logo.png">
+			<span id="user_active"></span>
+			<img alt="logout" id="logout" src="img/logout1.png">
+			<!-- Navigation Bar -->
+			<nav class="main_nav">
+				<div id="main_bar">
+				<!-- Menu LvL 1 -->
+				<ul id="script" class="navigation">
+					<li class="left"><a href="index.html"><span><img alt="home-icon" src="img/nav/home.png">Home</span></a></li>
+					<li><a href="gallery.html"><span><img alt="gallery-icon" src="img/nav/gallery.png">Gallery</span></a></li>
+					<li><a href="curses.html"><span><img alt="curses-icon" src="img/nav/curses.png">Curses</span></a>
+					<!-- Menu LvL 2 -->
+						<ul>
+							<li><a href="curses.html#graphic_design"><span>Graphic design</span></a>
+							<!-- Menu LvL 3 -->
+								<ul>
+									<li class="lvl2_first"><a href="curses.html#graphic_design-easy"><span>Basic Level</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#graphic_design-advanced"><span>Advanced Level</span></a></li>
+								</ul>
+							</li>
+							<li><a href="curses.html#video"><span>Video editing</span></a>
+							<!-- Menu LvL 3 -->
+								<ul>
+									<li class="lvl2_first"><a href="curses.html#video-easy"><span>Basic Level</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#video-advanced"><span>Advanced Level</span></a></li>
+								</ul>
+							</li>
+							<li><a href="curses.html#audio"><span>Audio editing</span></a>
+							<!-- Menu LvL 3 -->
+								<ul>
+									<li class="lvl2_first"><a href="curses.html#audio-easy"><span>Basic Level</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#audio-advanced"><span>Advanced Level</span></a></li>
+								</ul>
+							</li>
+							<li class="double_height"><a href="curses.html#videogame"><span>Videogame<br>programming</span></a>
+							<!-- Menu LvL 3 -->
+								<ul>
+									<li class="lvl2_first"><a href="curses.html#videogame-easy"><span>Basic Level</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#videogame-advanced"><span>Advanced Level</span></a></li>
+								</ul>
+							</li>
+							<li class="double_height last_li"><a href="curses.html#html"><span>Web<br>programming</span></a>
+							<!-- Menu LvL 3 -->
+								<ul>
+									<li class="lvl2_first"><a href="curses.html#html-easy"><span>Basic Level</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#html-advanced"><span>Advanced Level</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="contact.html"><span><img alt="message-icon" src="img/nav/message.png">Contact</span></a></li>
+					<li><a href="about.html"><span><img alt="about-icon" src="img/nav/question.png">About us..</span></a></li>
+					<li id="tmp_last_li" class="right"><a href="https://www.youtube.com/user/esiuclm" target="blank"><span><img alt="youtube-icon" src="img/nav/youtube.png">YouTube</span></a></li>
+				</ul>
+				</div>
+			</nav>
+	</header>
+	<!-- Navigation for Mobiles -->
+	<header id="mobile">
+			<img alt="logo" id="logo2" src="img/logo.png">
+			<div id="main_bar_mobile">
+				<ul class="bar_mobile">
+					<li class="first_mobile_li"><span><a href="index.html">Inicio</a></span></li>
+					<li id="action_item_gallery">Galería
+						<div id="item_gallery">
+						<ul>
+							<li><a href="images.html">- Imágenes</a></li>
+							<li><a href="videos.html">- Videos</a></li>
+						</ul>
+						</div>
+					</li>
+					<li><span id="action_item_curses">Cursos</span>
+					<!-- Menu LvL 2 -->
+						<div id="item_curses">
+						<ul>
+							<li><a id="mobile_graphic">- Diseño gráfico</a>
+							<!-- Menu LvL 3 -->
+							<div class="hidden" id="item_lvl3_1">
+								<ul>
+									<li><a href="curses.html#graphic_design-easy">- Nivel Básico</a></li>
+									<li><a href="curses.html#graphic_design-advanced">- Nivel Avanzado</a></li>
+								</ul>
+							</div>
+							</li>
+							<li><a id="mobile_video">- Edición de video</a>
+							<!-- Menu LvL 3 -->
+							<div class="hidden" id="item_lvl3_2">
+								<ul>
+									<li><a href="curses.html#video-easy">- Nivel Básico</a></li>
+									<li><a href="curses.html#video-advanced">- Nivel Avanzado</a></li>
+								</ul>
+							</div>
+							</li>
+							<li><a id="mobile_audio">- Edición de audio</a>
+							<!-- Menu LvL 3 -->
+							<div class="hidden" id="item_lvl3_3">
+								<ul>
+									<li><a href="curses.html#audio-easy">- Nivel Básico</a></li>
+									<li><a href="curses.html#audio-advanced">- Nivel Avanzado</a></li>
+								</ul>
+							</div>
+							</li>
+							<li><a id="mobile_videogame">- Programación de videojuegos</a>
+							<!-- Menu LvL 3 -->
+							<div class="hidden" id="item_lvl3_4">
+								<ul>
+									<li><a href="curses.html#videogame-easy">- Nivel Básico</a></li>
+									<li><a href="curses.html#videogame-advanced">- Nivel Avanzado</a></li>
+								</ul>
+							</div>
+							</li>
+							<li><a id="mobile_html">- Programación HTML y CSS</a>
+							<!-- Menu LvL 3 -->
+							<div class="hidden" id="item_lvl3_5">
+								<ul>
+									<li><a href="curses.html#html-easy">- Nivel Básico</a></li>
+									<li><a href="curses.html#html-advanced">- Nivel Avanzado</a></li>
+								</ul>
+							</div>
+							</li>
+						</ul>
+						</div>
+					</li>
+					<li>Contacto</li>
+					<li>Acerca de..</li>
+					<li class="last_mobile_li">YouTube</li>
+				</ul>
+				</div>
+	</header>
+	<!-- Cuerpo principal -->
+	<div id="container">
+	<!-- Contenido -->
+	<div id="body_form" class="first_content">
+			<div id="enc_title">
+				<h1>FP Curses</h1>
+				<img id="h1-corner" alt="h1-corner" src="img/h1-corner.png">
+			</div>
+			<div class="text">
+				<p>
+					In this section we perform all courses at our academy are described.
+				</p>
+				<ul id="lista_curses">
+					<li><h2 id="graphic">Graphic design</h2>
+						<ul id="display_graphic">
+							<li><h3 class="level" id="graphic_design-easy">Basic</h3>
+								<p>
+									In this course terms and methods of "art" and simple skills they are taught photographer. It will be taught to use programs such as Photoshop or Lightroom and static graphics. This course lasts two years, enrollment of € 100 and € 65 / month.
+								</p>
+							</li>
+							<li><h3 class="level" id="graphic_design-advanced">Advanced</h3>
+								<p>
+									Unlike the basic knowledge here last year and apply new dynamic graphic design and moving. Taught to use complex and advanced programs such as <b> Cinema 4D </b> or <b> Unity 3D </b>, in addition to Maya to design sketches itself. This course takes two years to full and must make a mid-level to access the same, registration 120 € and 80 € / month.
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li><h2 id="video">Video editing</h2>
+						<ul id="display_video">
+							<li><h3 class="level" id="video-easy">Basic</h3>
+								<p>
+									In this course techniques of video and film are taught in addition to learning about the use of programs such as <b> Sony Vegas </b>, <b> Pinnacle Studio </b> and <b> Premiere </b>. And thanks to partner companies as <b> SONY </b> and <b> GameChangerFilms </b> we can make an extra course on making short films and trailers. This course lasts two years, enrollment of € 100 and € 65 / month. No entrance examination is necessary.
+								</p>
+							</li>
+							<li><h3 class="level" id="video-advanced">Advanced</h3>
+								<p>
+									This course is more focused on the development of proprietary source code, that is, has been much development and resources as effects, custom animations and transitions for later import to video editing programs we use are created. 2015 As a new subject, animation programs like <b> Cinema 4D </b> and <b> Unity 3D </b> will be held. This course lasts two years, enrollment 120 € and 80 € / month.
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li><h2 id="audio">Audio editing</h2>
+						<ul id="display_audio">
+							<li><h3 class="level" id="audio-easy">Basic</h3>
+								<p>
+									This course teaches sound knowledge and know edit and create audio waves or sound spectra. This course lasts one years, tuition 70 € and 50 € / month.
+								</p>
+							</li>
+							<li><h3 class="level" id="audio-advanced">Advanced</h3>
+								<p>
+									Unlike the basic course are taught to use mixing tables, thanks to the partner company <b> Pioneer </b> have material quality support and help. This course lasts 1 year and not require an entrance examination, registration 90 € and 60 € / month.
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li><h2 id="videogame">Videogame programming</h2>
+						<ul id="display_videogame">
+							<li><p><i>" This is the most popular course, so there are no places for everyone, be sure to send your registration before June 11 so we can take your request into account. "</i></p></li>
+							<li><h3 class="level" id="videogame-easy">Basic</h3>
+								<p>
+									In this course theoretical and practical knowledge about video games and programs used to create them are taught, such as; <b> Unity 3D </b>, <b> Corona SDK </b> (optional "Mobile Application Development"), <b> Unreal Development Kit </b>, <b> Maya </b> as texturing, and <b> Cinema 4D </b> as 3D sketch animations games.
+								</p>
+								<p>
+									This course lasts two years and is necessary middleweight title cycle "microcomputer system and networks" (or quivalente) plus an aptitude test in the month of July (<a id="display_prueba">more details</a>) , registration 200 € and 120 € / month.
+								</p>
+								<p id="detalles_prueba">
+									<b>- Aptitude test: </b> Day July 17 at our academy, from 10: 00h to 13: 00h, and ID required prior contact.
+								</p>
+							</li>
+							<li><h3 class="level" id="videogame-advanced">Advanced</h3>
+								<p>
+									In this video game programming course I is fully focused on programming, the source code of the movements and actions. Lasts for an entire two years, enrollment 250 € and 140 € / month.
+								</p>
+							</li>
+						</ul>
+					</li>
+					<li><h2 id="html">Web programming</h2>
+						<ul id="display_html">
+							<li><h3 class="level" id="html-easy">Basic</h3>
+								<p>
+									This course teaches programming language <b> HTML </b> and <b> CSS </b> in versions <b> HTML5 </b> and <b> CSS3 </b>. This course lasts two years, enrollment of € 100 and € 70 / month.
+								</p>
+							</li>
+							<li><h3 class="level" id="html-advanced">Advanced</h3>
+								<p>
+									This course lasts 3 years, highly advanced programming <b> HTML5 </b>, <b> CSS3 </b> is taught with a small basic extra course of <b> CSS4 </b> (currently in Beta) <b> Javascript </b> (and <b> jQuery </b>), <b> AJAX </b> and <b> PHP </b>. Test access to it is required, in which a requirement is a grade point average of 7 in the intermediate year. Registration of € 160 and € 90 / month.
+								</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<br>
+			</div>
+	</div>
+	<!-- Barra Lateral -->
+	<div id="sidebar">
+		<div id="right_menu">
+			<!-- Inicio de sesión -->
+				<div id="login_layer">
+				<form onsubmit="return login() || active()" enctype="multipart/form-data" method="post">
+					<label for="user">User:</label>
+						<input placeholder="User" type="text" name="user" maxlength="20" id="user" value="" required>
+					<label for="password">Password:</label>
+						<input placeholder="Password" type="password" name="password" id="password" value="" required>
+						<input type="submit" id="signin" value="SignIn">
+				</form>
+				<input type="submit" id="signup" value="SignUp">
+				</div>
+			<!-- Registro -->
+				<div id="registro">
+					<h2>Registro</h2>
+					<form onsubmit="signup()" enctype="multipart/form-data" method="post">
+						<label for="signup-user">Usuario:</label>
+							<input placeholder="Usuario" type="text" name="signup-user" id="signup-user" value="" required>
+						<label for="signup-password">Contraseña:</label>
+							<input type="password" placeholder="Contraseña" name="signup-password" id="signup-password" value="" required>
+						<label for="signup-password">Repetir contraseña:</label>
+							<input type="password" placeholder="Contraseña" name="signup-password-verify" id="signup-password-verify" value="" required>
+							<input type="submit" id="signup-ok" value="Registrarse">
+					</form>
+					<button id="go_back">Volver</button>
+				</div>
+			<!-- Cookies Ayuda -->
+				<a href="cookies.html">Problems with Cookies?</a>
+				<span id="probe"></span>
+			<!-- Selector de idioma -->
+				<ul id="languages">
+					<li><a id="spanish"><img alt="Spanish" class="flag" src="img/flag_spanish.GIF"><span>Español</span></a></li>
+					<li><a id="catalan"><img alt="Catalan" class="flag" src="img/flag_catalan.png"><span>Català</span></a></li>
+					<li><a id="english"><img alt="English" class="flag" src="img/flag_english.png"><span>English</span></a></li>
+				</ul>
+				
+		</div>
+		<!-- Pié de página -->
+		<footer id="copyright">
+			<a href="https://www.moodle.org/" target="blank"><img alt="moodle" src="img/moodle.png"></a>
+			<a href="https://www.netacad.com" target="blank"><img alt="cisco" src="img/cisco.png"></a>
+			<span>Avellaneda Academy &copy;<br>All rights reserved.</span>
+		</footer>
+	</div>
+	<div id="filled_footer">&nbsp;</div>
+	<div id="cookie_warning">
+		We use Cookies to improve the user experience.<div id="accept_cookies">OK</div>
+	</div>
+	<!-- Post-Efectos JavaScript -->
+	<script type="text/javascript" src="js/efectos.js"></script>
+	</div>
+	</body>
+</html>

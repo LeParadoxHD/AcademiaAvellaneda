@@ -1,0 +1,106 @@
+
+html {
+	margin-left: 100px;
+	max-height: 2000px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+	margin: 300 auto;
+	position: relative;
+	width: 600px;
+	font-family: Calibri;
+	color: blue;
+	text-align: center;
+	background-image: url("../img/texture_grain.png");
+}
+
+h1#title {
+	display: none;
+	position: absolute;
+	top: -70px;
+	left: 180px;
+}
+
+iframe {
+	visibility: hidden;
+}
+
+span {
+	position: relative;
+	right: 50px;
+	font-size: 15pt;
+	font-weight: bold;
+	transition: all 1s;
+}
+
+div#bar_out_inner {
+	height: 30px;
+	width: 510px;
+}
+
+div#bar_out {
+	background-color: #484747;
+	-webkit-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-moz-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-o-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	height: 31px;
+	width: 500px;
+	border-radius: 50px;
+	display: none;
+	position: relative;
+	top: -20px;
+}
+
+div#bar {
+	background: url("../img/9.png") repeat;
+	background-position: 0px 0px;
+	position: relative;
+	height: 19px;
+	width: 0px;
+	margin-left: 7px;
+	border-radius: 50px;
+	top: 6px;
+	transition: width 0.7s linear, background-position 1s linear;
+	-webkit-transition: width 0.7s linear, background-position 1s linear;
+	-moz-transition: width 0.7s linear, background-position 1s linear;
+}
+
+.lang {
+	position: relative;
+	background-color: #2D2C2C;
+	-webkit-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-moz-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-o-box-shadow: inset 0px 0px 13px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	color: white;
+	font-weight: bold;
+	top: 100px;
+	right: 40px;
+	margin-right: 20px;
+	border: 0;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: none;
+	outline: 0;
+}
+
+.selected {
+	background-color: #25DD00;
+	-webkit-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-moz-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	-o-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.83), 0px 0px 10px #888888;
+	color: black;
+	outline: 0;
+}

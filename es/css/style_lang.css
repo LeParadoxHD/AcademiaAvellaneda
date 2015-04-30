@@ -1,0 +1,100 @@
+
+/* Reset */
+
+* {
+	font-family: sans-serif;
+}
+
+/* Formateando el body */
+
+body {
+	margin: 0 auto;
+	width: 700px;
+}
+
+/* Formateando la tabla */
+
+table#language {
+	margin-top: 20px;
+	width: 630px;
+	height: 200px;
+}
+
+/* Formateando las linias */
+
+hr {
+	width: 600px;
+	margin-right: 40px;
+	margin-top: 20px;
+}
+
+/* Formateando los títulos */
+
+h1 {
+	text-align: center;
+	margin-top: 40px;
+	margin-right: 50px;
+	color: orangered;
+	text-shadow: 1px 1px 7px #888888;
+}
+
+/* Decoración */
+
+h1:hover {
+	text-decoration: underline;
+}
+
+/* Formateando las imagenes */
+
+img {
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	width: 200px;
+	height: 110px;
+	display: block;
+	border-radius: 10px;
+}
+
+/* Decoración */
+
+img:hover {
+	border: 3px solid blue;
+	width: 194px;
+}
+
+/* Formateando la imagen central */
+
+img[alt=Catalan] {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Formateando celdas */
+
+td {
+	width: 202px;
+	color: navy;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* Formateando celda de imagen */
+
+td.photo {
+	height: 70%;
+}
+
+/* Decoración */
+
+td.title:hover {
+	text-decoration: underline;
+}
+
+/* Decoración */
+
+a {
+	text-decoration: none;
+	color: navy;
+}

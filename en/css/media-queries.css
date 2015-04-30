@@ -1,0 +1,252 @@
+
+/* Formateando estilos si la pantalla es de un móvil (actualmente no usado) */
+
+@media only screen and (max-width: 400px) {
+
+/*  HEADER */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	width: 1000px;
+}
+
+div#main_bar {
+	z-index: 5;
+	display: none;
+}
+
+header {
+	margin-top: 20px;
+	width: 400px;
+}
+
+img#logo {
+	width: 285px;
+	height: 115px;
+}
+
+div#right_menu {
+	position: relative;
+	clear: both;
+}
+
+/* BODY */
+
+div#body_form {
+	z-index: 4;
+	margin-top: 10px;
+	margin-left: 40px;
+	width: 300px;
+	max-width: 700px;
+	height: 470px;
+	border-radius: 10px;
+	background-color: #E1F5A9;
+	box-shadow: 1px 1px 5px #888888;
+	border: 1px solid #58D3F7;
+}
+
+div#enc_title {
+	width: 320px;
+	font-size: 14px;
+}
+
+div#enc_title h1 {
+	margin-left: 60px;
+	margin-top: 3px;
+}
+
+ul#details {
+	background: linear-gradient(to bottom, #58D3F7, #00BFFF);
+	width: 261px;
+	height: 130px;
+	position: relative;
+	margin-top: 60px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px #888888;
+	border: 1px solid #58D3F7;
+}
+
+/* RIGHT MENU */
+
+div#right_menu {
+	position: absolute;
+	width: 265px;
+	max-height: 345px;
+	border-radius: 30px;
+	margin-left: 40px;
+	margin-top: 1125px;
+}
+
+form, label, input[type=text], input[type=password] {
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+input[type=text], input[type=password] {
+	padding: 5px;
+	display: block;
+	z-index: 1;
+	width: 240px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	border: 1px solid #0174DF;
+}
+
+
+div.title {
+	width: 343px;
+	height: 45px;
+	margin-top: 20px;
+	margin-left: -21px;
+}
+
+img.curse-corner-left {
+	position: absolute;
+	top: 45px;
+	left: 1px;
+}
+
+img.curse-corner-right {
+	position: absolute;
+	top: 45px;
+	left: 324px;
+}
+
+div.title h1 {
+	margin-left: 85px;
+	margin-top: 2px;
+}
+
+div#enroll {
+	margin-top: -15px;
+}
+
+
+div.special {
+	width: 342px;
+	height: 45px;
+	margin-top: 30px;
+	margin-left: -20px;
+}
+
+div.special h1 {
+	font-size: 27px;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+div#enroll_new {
+	width: 262px;
+	height: 291px;
+}
+
+div#enroll_new form fieldset table tr td {
+	display: block;
+}
+footer {
+	margin-top: 1490px;
+	width: 305px;
+	margin-left: 40px;
+}
+
+footer > span {
+	top: 105px;
+}
+
+img[alt=moodle] {
+	display: none;
+}
+img[alt=cisco] {
+	display: none;
+}
+img[alt=massaguer] {
+	display: none;
+}
+
+img.logo {
+	margin: 0 auto;
+}
+
+header#web {
+	display: none;
+}
+
+header#mobile {
+	display: block;
+}
+
+ul.bar_mobile {
+	margin-left: 43px;
+	text-align: left;
+	color: navy;
+}
+
+ul.bar_mobile li {
+	list-style-type: none;
+	margin-left: -4px;
+	padding-top: 2px;
+	padding-left: 4px;
+	cursor: pointer;
+	width: 300px;
+	background: linear-gradient(to bottom, #00A2FF, #008DFF)
+}
+
+ul.bar_mobile li a{
+	text-decoration: none;
+}
+
+div#item_curses {
+	display: none;
+}
+
+div#item_gallery {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+div#item_curses ul li {
+	width: 300px;
+}
+
+div#item_curses ul li a, div#item_gallery ul li a {
+	margin-left: 30px;
+}
+
+div#item_curses ul li ul li a {
+	margin-left: 60px;
+}
+
+div#item_curses ul li a {
+	margin-left: 30px;
+}
+
+ul.bar_mobile > li:hover {
+	background: linear-gradient(to bottom, #F7FF00, #FFD100)
+}
+
+ul.bar_mobile li ul li:hover {
+	background: linear-gradient(to bottom, #00FF26, #00D720)
+}
+
+li.first_mobile_li {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+li.last_mobile_li {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+ul#languages {
+	margin-top: -40px;
+}

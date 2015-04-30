@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jquery.autotab.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+		<link rel="shortcut icon" href="img/favicon.png">
+		<title>Registro - Nuevo usuario</title>
+	</head>
+	<body>
+		<div id="container">
+			<section id="header">
+				<section id="logo">
+				<img alt="logo" src="img/logo.png" id="logo">
+				</section>
+				<section id="description">
+					<span>
+					Académia Avellaneda<br>
+					Formulario de registro<br>
+					nº 53 articulo 87 
+					</span>
+				</section>
+			</section>
+			<section id="signup-form"> 
+			<form onsubmit="signup()" action="index.html" enctype="multipart/form-data" method="post">
+			<span id="ad">Campo requerido</span>
+				<fieldset>
+					<legend>Datos personales</legend>
+				<hr class="x">
+				<br>
+				
+					<div class="float_left">
+						<label class="required" for="name">Nombre:</label>
+							<input type="text" name="name" id="name" required maxlength="20"><br>
+						<label for="last_name">Apellidos:</label>
+							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
+						<label class="required" for="dni">DNI:</label>
+							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" title="Inserta tu DNI.Ej 47293029T" required maxlength="9"><br>
+					</div>
+					<hr class="y1">
+					<div class="float_right" id="first_class">
+						<div>
+						<label class="required" for="born_day">Fecha de nacimiento:</label><br>
+							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
+						</div>
+						<label class="required" for="sex">Sexo:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Hombre</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Mujer</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Otros</span>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Localización</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label for="location">Dirección:</label>
+							<input type="text" name="location" id="location" value="" maxlength="40"><br>
+						<label class="required" for="postal">Código postal:</label>
+							<input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" id="postal" value="" maxlength="5" required><br>
+						<label class="required" for="city">Ciudad:</label>
+							<input type="text" name="city" id="city" value="" maxlength="30" required><br>
+					</div>
+					<hr class="y2">
+					<div style="margin-right: 65px;" class="float_right">
+						<label for="country">País:</label>
+							<input type="text" name="country" id="country" value="España" readonly title="No es posible modificar el contenido"><br>
+						<label class="required" for="tel">Teléfono:</label>
+							<input type="tel" name="tel" id="tel" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Datos de usuario</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label class="required" for="user">Nombre de usuario:</label>
+							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
+						<label class="required" for="password">Contraseña:</label>
+							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
+						<label class="required" for="password2">Repetir contraseña:</label>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="La contraseña debe tener al menos 8 carácteres" required maxlength="20"><br>
+							<input type="hidden" id="textFile" value="Contraseña cifrada">
+					</div>
+					<hr class="y1">
+					<div style="margin-right: 65px;" class="float_right">
+						<label class="required" for="email">Correo electrónico:</label>
+							<input type="email" name="email" id="email" value="" maxlength="30" required><br>
+						<label class="required" for="security_question">Pregunta de seguridad:</label>
+							<select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
+								<option value="mascota">¿Cuál es el nombre de tu mascota?</option>
+								<option value="madre">¿Cuál es el nombre de tu madre?</option>
+								<option value="nacimiento">¿Cuál es tu lugar de nacimiento?</option>
+								<option value="coche">¿Cuál fué tu primer coche?</option>
+							</select>
+							<input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
+					</div>
+					</fieldset>
+					<fieldset>
+					<legend>Hobbies</legend>
+					<hr class="x">
+						<table>
+							<tr>
+								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox">Informática</span></td>
+								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox">Videojuegos</span></td>
+								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox">Programación</span></td>
+							<tr>
+								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox">Internet</span></td>
+								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox">Amigos</span></td>
+								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox">Trabajar</span></td>
+							<tr>
+								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox">Baile</span></td>
+								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox">Cocinar</span></td>
+								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox">Fotografía</span></td>
+							<tr>
+								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox">Puzzles</span></td>
+								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox">Leer</span></td>
+								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox">Música</span></td>
+							<tr>
+								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox">Hacer ejercicio</span></td>
+								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox">Compras</span></td>
+						</table>
+					</fieldset>
+					<fieldset>
+					<legend>Términos y condiciones</legend>
+					<hr class="x">
+						<textarea readonly>
+Artículo 1. Objeto.
+
+La presente Ley Orgánica tiene por objeto garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar.
+
+Artículo 2.
+
+Ámbito de aplicación.
+
+1. La presente Ley Orgánica será de aplicación a los datos de carácter personal registrados en soporte físico, que los haga susceptibles de tratamiento, ya toda modalidad de uso posterior de estos datos por los sectores público y privado. Se regirá por la presente Ley Orgánica todo tratamiento de datos de carácter personal:
+
+a) Cuando el tratamiento se efectúe en territorio español en el marco de las actividades de un establecimiento del responsable del tratamiento.
+
+b) Cuando al responsable del tratamiento no establecido en territorio español, le sea de aplicación la legislación española en aplicación de normas de derecho internacional público.
+
+c) Cuando el responsable del tratamiento no esté establecido en territorio de la Unión Europea y utilice en el tratamiento de datos medios situados en territorio español, salvo que tales medios se utilicen únicamente con fines de tránsito.
+
+2. El régimen de protección de los datos de carácter personal que establece la presente Ley Orgánica no será de aplicación:
+
+LEGISLACIÓN CONSOLIDADA
+
+Página 1
+
+a) A los ficheros mantenidos por personas físicas en el ejercicio de actividades exclusivamente personales o domésticas.
+
+b) A los ficheros sometidos a la normativa sobre protección de materias clasificadas.
+
+c) A los ficheros establecidos para la investigación del terrorismo y de formas graves de delincuencia organizada. Sin embargo, en estos supuestos el responsable del fichero comunicará previamente la existencia del mismo, sus características generales y su finalidad a la Agencia de Protección de Datos.
+
+3. Se regirán por sus disposiciones específicas, y por lo previsto especialmente, en su caso, esta Ley Orgánica los tratamientos de datos personales:
+
+a) Los ficheros regulados por la legislación de régimen electoral.
+
+b) Los que sirvan a fines exclusivamente estadísticos, y estén amparados por la legislación estatal o autonómica sobre la función estadística pública.
+
+c) Los que tengan por objeto el almacenamiento de los datos contenidos en los informes personales de calificación a que se refiere la legislación del régimen del personal de las Fuerzas Armadas.
+
+d) Los derivados del Registro Civil y del Registro Central de Penados y Rebeldes.
+
+e) Los procedentes de imágenes y sonidos obtenidos mediante la utilización de videocámaras por las fuerzas y cuerpos de seguridad, de conformidad con la legislación sobre la materia.
+
+Artículo 3. Definiciones.
+
+A los efectos de esta Ley Orgánica, se entenderá por:
+
+a) Datos de carácter personal: cualquier información concerniente a personas físicas identificadas o identificables.
+
+b) A cualquier conjunto organizado de datos de carácter personal, cualquiera que sea la forma o modalidad de su creación, almacenamiento, organización y acceso.
+
+c) Tratamiento de datos: operaciones y procedimientos técnicos de carácter automatizado o no, que permitan la recogida, grabación, conservación, elaboración, modificación, bloqueo y cancelación, así como las cesiones de datos que resulten de comunicaciones, consultas, interconexiones y transferencias .
+
+d) Responsable del fichero o tratamiento: persona física o jurídica, de naturaleza pública o privada, u órgano administrativo, que decida sobre la finalidad, contenido y uso del tratamiento.
+
+e) Afectado o interesado: persona física titular de los datos que sean objeto del tratamiento a que se refiere el apartado c) de este artículo.
+
+f) Procedimiento de disociación: todo tratamiento de datos personales de modo que la información que se obtenga no pueda asociarse a persona identificada o identificable.
+
+g) Encargado del tratamiento: la persona física o jurídica, autoridad pública, servicio o cualquier otro organismo que, solo o conjuntamente con otros, trate datos personales por cuenta del responsable del tratamiento.
+
+h) Consentimiento del interesado: toda manifestación de voluntad, libre, inequívoca, específica e informada, mediante la que el interesado consienta el tratamiento de datos personales que le conciernen.
+
+i) Cesión o comunicación de datos: toda revelación de datos realizada a una persona distinta del interesado.
+
+j) Fuentes accesibles al público: los archivos que pueden ser consultados por cualquier persona, no impedida por una norma limitativa o sin más exigencia que, en su caso, el abono de una contraprestación. Tienen la consideración de fuentes de acceso público, exclusivamente, el censo promocional, los repertorios telefónicos en los términos previstos en la normativa específica y las listas de personas pertenecientes a grupos de profesionales que contengan únicamente los datos de nombre, título, profesión, actividad , grado académico, dirección e indicación de su pertenencia al grupo. Asimismo, tienen el carácter de fuentes de acceso público los diarios y boletines oficiales y los medios de comunicación.
+
+BOLETÍN OFICIAL DEL ESTADO
+LEGISLACIÓN CONSOLIDADA
+
+Página 2
+
+TÍTULO II
+
+Principios de la protección de datos
+
+Artículo 4. Calidad de los datos.
+
+1. Los datos de carácter personal sólo se podrán recoger para su tratamiento, así como someterlos a dicho tratamiento, cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y las finalidades determinadas, explícitas y legítimas para las que se hayan obtenido.
+
+2. Los datos de carácter personal objeto de tratamiento no se pueden utilizar para finalidades incompatibles con aquellas para las que los datos hubieran sido recogidos. No se considera incompatible el tratamiento posterior de éstos con fines históricos, estadísticos o científicos.
+
+3. Los datos de carácter personal serán exactos y puestos al día de forma que respondan con veracidad a la situación actual del afectado.
+
+4. Si los datos de carácter personal registrados son inexactos, en todo o en parte, o incompletos, serán cancelados y sustituidos de oficio por los correspondientes datos rectificados o completados, sin perjuicio de las facultades que a los afectados reconoce el artículo 16.
+
+5. Los datos de carácter personal serán cancelados cuando hayan dejado de ser necesarios o pertinentes para la finalidad para la que han sido recabados o registrados. No serán conservados de forma que permitan identificar el interesado durante un período superior al necesario para los fines de acuerdo con las cuales hayan sido recabados o registrados.
+
+Reglamentariamente se determinará el procedimiento por el que, por excepción, atendidos los valores históricos, estadísticos o científicos de acuerdo con la legislación específica, se decida el mantenimiento íntegro de determinados datos.
+
+6. Los datos de carácter personal serán almacenados de forma que permitan el ejercicio del derecho de acceso, salvo que sean legalmente cancelados.
+
+7. Se prohíbe la recogida de datos por medios fraudulentos, desleales o ilícitos. Artículo 5. Derecho de información en la recogida de datos.
+
+1. Los interesados ​​a los que se soliciten datos personales deberán ser previamente informados de modo expreso, preciso e inequívoco:
+
+a) De la existencia de un fichero o tratamiento de datos de carácter personal, de la finalidad de la recogida de éstos y de los destinatarios de la información.
+
+b) Del carácter obligatorio o facultativo de la respuesta a las preguntas que les sean planteadas.
+
+c) De las consecuencias de la obtención de los datos o de la negativa a suministrarlos.
+
+d) De la posibilidad de ejercitar los derechos de acceso, rectificación, cancelación y oposición.
+
+e) De la identidad y dirección del responsable del tratamiento o, en su caso, de su representante.
+
+Cuando el responsable del tratamiento no esté establecido en el territorio de la Unión Europea y utilice en el tratamiento de datos medios situados en territorio español, deberá designar, salvo que tales medios se utilicen con fines de trámite, un representante en España, sin perjuicio de las acciones que se puedan emprender contra el propio responsable del tratamiento.
+
+2. Cuando se utilicen cuestionarios u otros impresos para la recogida, figurarán en los mismos, de forma claramente legible, las advertencias a que se refiere el apartado anterior.
+
+3. No será necesaria la información a que se refieren las letras b), c) yd) del apartado 1 si el contenido de la información se deduce claramente de la naturaleza de los datos personales que se solicitan o de las circunstancias en el que se recogen.
+
+4. Cuando los datos de carácter personal no hayan sido recabados del interesado, éste deberá ser informado de forma expresa, precisa e inequívoca, por el responsable del fichero o su representante, dentro de los tres meses siguientes al momento del registro de las datos, salvo que ya hubiera sido informado con anterioridad, del contenido del tratamiento, de la
+
+BOLETÍN OFICIAL DEL ESTADO
+LEGISLACIÓN CONSOLIDADA
+
+Página 3
+
+Procedencia de los datos, así como de lo previsto en las letras a), d) ye) del apartado 1 de este artículo.
+
+5. No será de aplicación lo dispuesto en el apartado anterior, cuando expresamente una ley lo prevea, cuando el tratamiento tenga fines históricos, estadísticos o científicos, o cuando la información al interesado resulte imposible o exija esfuerzos desproporcionados, a criterio de la Agencia de Protección de Datos o del organismo autonómico equivalente, en consideración al número de interesados, a la antigüedad de los datos ya las posibles medidas compensatorias.
+
+Asimismo, tampoco regirá lo dispuesto en el apartado anterior cuando los datos procedan de fuentes accesibles al público y se destinen a la actividad de publicidad o prospección comercial, en este caso, en cada comunicación que se dirija al interesado se le informará del origen de los datos y de la identidad del responsable del tratamiento así como de los derechos que le asisten.
+
+Artículo 6. Consentimiento del afectado.
+
+1. El tratamiento de los datos de carácter personal requerirá el consentimiento inequívoco del afectado, salvo que la ley disponga otra cosa.
+
+2. No es necesario el consentimiento cuando los datos de carácter personal se recojan para el ejercicio de las funciones propias de las administraciones públicas en el ámbito de sus competencias; cuando se refieran a las partes de un contrato o precontrato de una relación negocial, laboral o administrativa y sean necesarios para su mantenimiento o cumplimiento; cuando el tratamiento de los datos tenga por finalidad proteger un interés vital del interesado en los términos del artículo 7, apartado 6, de esta Ley, o cuando los datos figuren en fuentes accesibles al público y su tratamiento sea necesario para la satisfacción del interés legítimo perseguido por el responsable del fichero o por el del tercero a quien se comuniquen los datos, siempre que no se vulneren los derechos y libertades fundamentales del interesado.
+
+3. El consentimiento a que se refiere este artículo podrá ser revocado cuando exista causa justificada para ello y no se le atribuyan efectos retroactivos.
+
+4. En los casos en que no sea necesario el consentimiento del afectado para el tratamiento de los datos de carácter personal, y siempre que una ley no disponga lo contrario, éste puede oponerse a su tratamiento cuando existan motivos fundados y legítimos relativos a una concreta situación personal. En este supuesto, el responsable del fichero excluirá del tratamiento los datos relativos al afectado.
+						</textarea>
+						<br>
+							<div id="conditions">
+								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label for="accept_terms">Acepto los términos y condiciones</label><br>
+								<input type="checkbox" name="reset" id="reset" value="" required><label id="updates" for="reset">Acepto recibir actualizaciones en  </label>
+							</div>
+					</fieldset>
+					<div class="float_none">
+						<input type="submit" onclick="saveTextAsFile()" value="Registrarse">
+						<input type="reset" value="Borrar campos">
+					</div>
+				</form>
+			</section>
+		</div>
+	<script src="js/efectos.js"></script>
+	<script src="js/efectos.signup.js"></script>
+	</body>
+</html>

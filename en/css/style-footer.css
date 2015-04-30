@@ -1,0 +1,104 @@
+
+/* Formateando el pié de página */
+
+footer > span {
+	line-height: 1.3;
+}
+
+footer > span:hover {
+	color: navy;
+}
+
+/* Formateando imagen del Moodle */
+
+img[alt=moodle] {
+	width: 90px;
+	height: 80px;
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 10px;
+	top: 10px;
+}
+
+/* Formateando imagen de Cisco */
+
+img[alt=cisco] {
+	height: 60px;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+/* Formateando texto interior del footer */
+
+footer > span {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+	width: 200px;
+	font-size: 13px;
+}
+
+/* Formateando desplegable para aceptar las cookies */
+
+div#cookie_warning {
+	width: 100%;
+	height: 25px;
+	position: fixed;
+	padding-top: 2px;
+	bottom: -31px;
+	left: 0px;
+	z-index: 55;
+	background-color: black;
+	color: white;
+	text-align: center;
+	opacity: 0.1;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	border-top: 3px solid green;
+	border-bottom: 3px solid green;
+}
+
+/* Formateando botón de OK de las cookies */
+
+div#accept_cookies {
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 1px;
+	height: 21px;
+	width: 30px;
+	color: black;
+	cursor: pointer;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, #FBB700, #FB8800);
+}
+
+/* Formateando un espacio vacío al final de todo para dejar más espacio en el overflow */
+
+div#filled_footer {
+	height: 20px;
+	position: absolute; 
+	margin-top: 960px;
+	z-index: 55;
+}
+
+footer#copyright {
+	position: relative;
+	float: right;
+	clear: right;
+	display: block;
+	top: 30px;
+	margin-right: 240px;
+	background: linear-gradient(to bottom, #FBB700, #DBA901);
+	width: 260px;
+	height: 150px;
+	border: 1px solid black;
+	border-radius: 10px;
+	opacity: 0;
+	transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-webkit-transition: all 0.4s linear;
+}

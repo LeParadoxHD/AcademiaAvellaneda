@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jquery.autotab.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+		<link rel="shortcut icon" href="img/favicon.png">
+		<title>Signin Up - New User</title>
+	</head>
+	<body>
+		<div id="container">
+			<section id="header">
+				<section id="logo">
+				<img alt="logo" src="img/logo.png" id="logo">
+				</section>
+				<section id="description">
+					<span>
+					Avellaneda Academy<br>
+					SignUp Form<br>
+					nº 53 article 87 
+					</span>
+				</section>
+			</section>
+			<section id="signup-form"> 
+			<form onsubmit="signup()" action="index.html" enctype="multipart/form-data" method="post">
+			<span id="ad">Required field</span>
+				<fieldset>
+					<legend>Personal data</legend>
+				<hr class="x">
+				<br>
+				
+					<div class="float_left">
+						<label class="required" for="name">Name:</label>
+							<input type="text" name="name" id="name" required maxlength="20"><br>
+						<label for="last_name">Last Name:</label>
+							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
+						<label class="required" for="dni">DNI:</label>
+							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" title="Put your DNI.Ex 47293029T" required maxlength="9"><br>
+					</div>
+					<hr class="y1">
+					<div class="float_right" id="first_class">
+						<div>
+						<label class="required" for="born_day">Date of birth:</label><br>
+							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
+						</div>
+						<label class="required" for="sex">Sex:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Man</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Woman</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Others</span>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Location</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label for="location">Direction:</label>
+							<input type="text" name="location" id="location" value="" maxlength="40"><br>
+						<label class="required" for="postal">Postal Code:</label>
+							<input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" id="postal" value="" maxlength="5" required><br>
+						<label class="required" for="city">City:</label>
+							<input type="text" name="city" id="city" value="" maxlength="30" required><br>
+					</div>
+					<hr class="y2">
+					<div style="margin-right: 65px;" class="float_right">
+						<label for="country">Country:</label>
+							<input type="text" name="country" id="country" value="Spain" readonly title="You can modify the default country"><br>
+						<label class="required" for="tel">Telephone:</label>
+							<input type="tel" name="tel" id="tel" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>User Data</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label class="required" for="user">Username:</label>
+							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
+						<label class="required" for="password">Password:</label>
+							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="8 digit minimum" required maxlength="20"><br>
+						<label class="required" for="password2">Repeat password:</label>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="8 digit minimum" required maxlength="20"><br>
+							<input type="hidden" id="textFile" value="Encrypted password">
+					</div>
+					<hr class="y1">
+					<div style="margin-right: 65px;" class="float_right">
+						<label class="required" for="email">E-mail:</label>
+							<input type="email" name="email" id="email" value="" maxlength="30" required><br>
+						<label class="required" for="security_question">Security question:</label>
+							<select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
+								<option value="mascota">What is the name of your pet?</option>
+								<option value="madre">What is the name of your mother?</option>
+								<option value="nacimiento">Which is your born city?</option>
+								<option value="coche">What was your first car?</option>
+							</select>
+							<input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
+					</div>
+					</fieldset>
+					<fieldset>
+					<legend>Hobbys</legend>
+					<hr class="x">
+						<table>
+							<tr>
+								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox">Computing</span></td>
+								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox">Videogames</span></td>
+								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox">Programming</span></td>
+							<tr>
+								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox">Internet</span></td>
+								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox">Friends</span></td>
+								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox">Work</span></td>
+							<tr>
+								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox">Dance</span></td>
+								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox">Cook</span></td>
+								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox">Photography</span></td>
+							<tr>
+								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox">Puzzles</span></td>
+								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox">Read</span></td>
+								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox">Music</span></td>
+							<tr>
+								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox">Do sport</span></td>
+								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox">Shopping</span></td>
+						</table>
+					</fieldset>
+					<div class="float_none">
+						<input type="submit" onclick="saveTextAsFile()" value="Save Changes">
+						<input type="reset" value="Delete fields">
+					</div>
+				</form>
+			</section>
+		</div>
+	<script src="js/efectos.js"></script>
+	<script src="js/efectos.signup.js"></script>
+	</body>
+</html>

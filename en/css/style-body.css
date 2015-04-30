@@ -1,0 +1,433 @@
+
+/* Contenedor principal del documento */
+
+div#container {
+	width: 1200px;
+	margin-top: -10px;
+	height: 100%;
+	display: block;
+}
+
+/* Contenedor del contenido variable de la web */
+
+div#body_form {
+	float: left;
+	display: block;
+	margin-top: 50px;
+	margin-left: -50px;
+	width: 700px;
+	max-width: 700px;
+	border-radius: 10px;
+	background-color: #E1F5A9;
+	box-shadow: 1px 1px 5px #888888;
+	margin-bottom: 50px;
+}
+
+/* Formateando títulos */
+
+div#enc_title {
+	width: 721px;
+	height: 45px;
+	display: block;
+	z-index: 10;
+	position: relative;
+	margin-top: 20px;
+	margin-left: -20px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: linear-gradient(to top, #FE9A2E, #FFBF00);
+	box-shadow: 0px 3px 10px #888888;
+}
+
+/* Formateando títulos */
+
+div#enc_title h1 {
+	position: relative;
+	z-index: 10;
+	color: #2E9AFE;
+	text-align: left;
+	top: 2px;
+	margin-left: 40px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* imagen de cornisa para conseguir efecto 3D */
+
+img#h1-corner {
+	display: block;
+	z-index: 5;
+	left: 0px;
+	top: 45px;
+	position: absolute;
+}
+
+/* Contenido principal */
+
+div.text {
+	margin-top: 20px;
+	padding-right: 30px;
+	padding-left: 20px;
+}
+
+/* Formateo de la imagen de HTML5 */
+
+img[alt=html5-logo] {
+	width: 250px;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+div#text-left {
+	float: left;
+	width: 380px;
+}
+div#text-right {
+	float: right;
+}
+
+div#text-both {
+	margin-top: 10px;
+	float: none;
+	clear: both;
+}
+
+/* Formateando párrafos */
+
+p {
+	margin-top: 10px;
+	text-align: justify;
+	text-indent: 2em;
+}
+
+/* Formateando párrafos */
+
+p::first-letter {
+	font-size: 20px;
+}
+
+/* Formateando sección del registro */
+
+div#registro {
+	margin-top: -20px;
+	background-color: #FE9A2E;
+	z-index: 54;
+	display: none;
+	bottom: 40px;
+}
+
+/* Formateando subtítulos */
+
+h2 {
+	margin-top: 20px;
+}
+
+/* Formateando títulos 3D dinámicos */
+
+div.title {
+	position: relative;
+	display: block;
+	z-index: 50;
+	width: 740px;
+	height: 45px;
+	margin-top: 70px;
+	margin-left: -20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: linear-gradient(to top, #186aff, #2e9bd9);
+	box-shadow: 0px 1px 5px #0000FF;
+}
+
+/* imagenes de cornisa para conseguir efecto 3D */
+
+img.curse-corner-left {
+	position: relative;
+	z-index: -1;
+	top: 5px;
+	right: 349px;
+}
+
+img.curse-corner-right {
+	position: relative;
+	z-index: -1;
+	top: 2px;
+	width: 18px;
+	left: 350px;
+}
+
+/* Formateando títulos dentro del div de título */
+
+div.title h1 {
+	color: orange;
+	position: relative;
+	z-index: 50;
+	margin-left: 50px;
+	top: 2px;
+	text-align: left;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+div#second_content {
+	margin-top: -25px;
+}
+
+/* Formateando sección de los detalles de la academia */
+
+ul#details {
+	background: linear-gradient(to bottom, #58D3F7, #00BFFF);
+	width: 660px;
+	height: 100px;
+	text-align: left;
+	list-style-type: none;
+	margin-top: -10px;
+	margin-left: 0px;
+	padding: 20px;
+	padding-top: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 1px 7px #186AFF;
+	border: 1px solid #58D3F7;
+}
+
+/* Formateando sección de inscripciones */
+
+div#enroll_new {
+	background-color: #81F7D8;
+	width: 660px;
+	height: 220px;
+	text-align: left;
+	list-style-type: none;
+	margin-top: -10px;
+	padding: 20px;
+	padding-top: 40px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	z-index: 40;
+	box-shadow: 1px 1px 5px #888888;
+	border: 1px solid #58D3F7;
+}
+
+/* Título especial solo de las inscripciones */
+
+div.special {
+	position: relative;
+	display: block;
+	z-index: 50;
+	width: 740px;
+	height: 45px;
+	top: 5px;
+	margin-left: -20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: linear-gradient(to bottom, #BFFF00, #74DF00);
+	box-shadow: 0px 1px 5px #74DF00;
+}
+
+div.special h1 {
+	color: white;
+	position: relative;
+	z-index: 50;
+	margin-left: 50px;
+	top: 3px;
+	text-align: left;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+div#enroll {
+	margin-top: 30px;
+}
+
+/* Formateando fieldsets */
+
+fieldset {
+	padding: 10px;
+	border-radius: 20px;
+	border: 1px solid blue;
+}
+
+/* Formateando estilos varios dentro de la tabla */
+
+#first_td {
+	width: 200px;
+}
+#second_td {
+	vertical-align: top;
+}
+fieldset label {
+	line-height: 30px;
+}
+
+label.now_curse {
+	margin-top: 0px;
+}
+
+form#enroll_form fieldset input {
+	width: 150px;
+}
+
+select {
+	width: 100px;
+}
+option {
+	margin-left: 20px;
+}
+
+/* imagen conforme se ha enviado la solicitud */
+
+img#ok {
+	margin-top: 20px;
+	margin-left: 305px;
+	width: 80px;
+	display: none;
+}
+
+/* Título de la tabla */
+
+legend {
+	margin-left: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Ni idea, pero se queda por si acaso */
+
+ul.lista_normal {
+	padding-left: 80px;
+	text-align: justify;
+	font-size: 14px;
+}
+
+ul.lista_normal li {
+	line-height: 20px;
+}
+
+/* Formateando lista de cursos formativos */
+
+ul#lista_curses {
+	list-style-type: none;
+	text-align: left;
+	margin-left: 50px;
+	line-height: 1.5;
+}
+
+ul#lista_curses li {
+	margin-left: 0px;
+}
+
+ul#lista_curses li h2 {
+	color: #0174DF;
+}
+
+ul#lista_curses li ul li {
+	list-style-type: none;
+	text-align: left;
+	margin-left: 20px;
+}
+
+ul#lista_curses li ul li h3 {
+	color: green;
+}
+
+
+
+/* Insertar texto "Nivel" en los subtítulos */
+
+.level:before {
+	content: "Level ";
+}
+
+ul#lista_curses li h2:hover {
+	text-decoration: underline;
+	text-decoration-color: #0174DF;
+	cursor: pointer;
+}
+
+/* Insertar más espacio entre líneas después de los párrafos de cursos */
+
+ul#lista_curses li ul li {
+	margin-bottom: 15px !important;
+}
+
+ul#lista_curses li ul li p {
+	line-height: 1.3 !important;
+}
+
+ul#lista_curses li h2 {
+	margin-bottom: 20px;
+}
+
+#display_graphic, #display_video, #display_audio, #display_videogame, #display_html {
+	display: none;
+}
+
+p#detalles_prueba {
+	display: none;
+}
+
+a#display_prueba {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+textarea {
+	width: 638px;
+	height: 100px;
+	padding: 10px;
+	border: 1px solid #0174DF;
+	border-radius: 10px;
+	overflow: auto;
+}
+
+div#gallery {
+	margin-top: 20px;
+}
+
+div#gallery img {
+	width: 0px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 5px;
+	transition: width 1s;
+	border-radius: 10px;
+	display: none;
+	position: relative;
+}
+
+div#gallery img:hover {
+	box-shadow: 0px 1px 10px #000000;
+	border: 1px solid blue;
+	border-radius: 10px;
+	width: 298px;
+	height: 158px;
+	transform: rotate(-3deg);
+}
+
+input#contact_send {
+	margin-left: 0px !important;
+}
+
+input#contact_reset {
+	width: 115px !important;
+	float: right;
+	margin-right: -10px !important;
+}
+
+ul#details_about {
+	padding: 20px;
+	text-align: left;
+	list-style-type: none;
+}
+
+iframe {
+	border-radius: 20px;
+	margin-bottom: 15px;
+	border: 1px solid green;
+}
+
+h4 {
+	cursor: pointer;
+}
+
+form#config  input {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

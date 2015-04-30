@@ -1,0 +1,130 @@
+
+/* Formateando menú derecho */
+
+div#right_menu {
+	float: right;
+	position: relative;
+	padding: 20px;
+	line-height: 30px;
+	margin-right: 240px;
+	margin-top: 1000px;
+	width: 220px;
+	border-radius: 10px;
+	background-color: #FE9A2E;
+	box-shadow: 3px 3px 10px #888888;
+	border: 1px solid orangered;
+	transition: all 3s;
+	opacity: 0.1;
+}
+
+/* Formateando inputs del menú derecho */
+
+form, label, input[type=text], input[type=password] {
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+input[type=text], input[type=password] {
+	padding: 5px;
+	display: block;
+	z-index: 1;
+	width: 200px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	border: 1px solid #0174DF;
+}
+
+input[type=submit], input[type=reset] {
+	margin-left: 30px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 3px;
+	padding-left: 7px;
+	background: linear-gradient(to top, #2E9AFE, #00BFFF);
+	width: 70px;
+	height: 30px;
+	border: 1px solid green;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px black;
+}
+
+input[type=submit]#signup {
+	margin-left: 5px;
+	display: block;
+	position: relative;
+	bottom: 40px;
+	left: 105px;
+	width: 90px;
+}
+
+/* Formateando botones (de toda la web) */
+
+button {
+	cursor: pointer;
+	bottom: 31px;
+	left: 45px;
+	position: relative;
+	font-size: 15px;
+	padding: 3px;
+	padding-left: 7px;
+	background: linear-gradient(to top, #2E9AFE, #00BFFF);
+	width: 70px;
+	height: 30px;
+	border: 1px solid green;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px black;
+}
+
+/* Formateando selector de idioma */
+
+ul#languages {
+	margin-left: 4px;
+	list-style-type: none;
+	text-align: left;
+}
+
+/* Formateando imagenes de las banderas de idioma */
+
+.flag {
+	width: 20px;
+	height: 15px;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+/* Formateando texto del selector de idioma */
+
+img + span {
+	font-size: 13px;
+	margin-left: -3px;
+}
+
+/* Formateando enlaces solo del selector de idioma */
+
+div#right_menu > ul li > a {
+	text-decoration: none;
+	color: navy;
+	letter-spacing: 1px;
+}
+
+/* Formateando input de apellidos  */
+
+input[id=signup-last-name] {
+	margin-top: 20px;
+}
+
+/* Formateando botón de "Enviar" */
+
+input[type=submit]#signup-ok {
+	width: 85px;
+	margin-left: 25px;
+}
+
+/* Formateando todos los enlaces de menú derecho */
+
+div#right_menu > a {
+	text-decoration: none;
+	font-size: 14px;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jquery.autotab.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+		<link rel="shortcut icon" href="img/favicon.png">
+		<title>Signin Up - New User</title>
+	</head>
+	<body>
+		<div id="container">
+			<section id="header">
+				<section id="logo">
+				<img alt="logo" src="img/logo.png" id="logo">
+				</section>
+				<section id="description">
+					<span>
+					Avellaneda Academy<br>
+					SignUp Form<br>
+					nº 53 article 87 
+					</span>
+				</section>
+			</section>
+			<section id="signup-form"> 
+			<form onsubmit="signup()" action="index.html" enctype="multipart/form-data" method="post">
+			<span id="ad">Required field</span>
+				<fieldset>
+					<legend>Personal data</legend>
+				<hr class="x">
+				<br>
+				
+					<div class="float_left">
+						<label class="required" for="name">Name:</label>
+							<input type="text" name="name" id="name" required maxlength="20"><br>
+						<label for="last_name">Last Name:</label>
+							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
+						<label class="required" for="dni">DNI:</label>
+							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" title="Put your DNI.Ex 47293029T" required maxlength="9"><br>
+					</div>
+					<hr class="y1">
+					<div class="float_right" id="first_class">
+						<div>
+						<label class="required" for="born_day">Date of birth:</label><br>
+							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
+						</div>
+						<label class="required" for="sex">Sex:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Man</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Woman</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Others</span>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Location</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label for="location">Direction:</label>
+							<input type="text" name="location" id="location" value="" maxlength="40"><br>
+						<label class="required" for="postal">Postal Code:</label>
+							<input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" id="postal" value="" maxlength="5" required><br>
+						<label class="required" for="city">City:</label>
+							<input type="text" name="city" id="city" value="" maxlength="30" required><br>
+					</div>
+					<hr class="y2">
+					<div style="margin-right: 65px;" class="float_right">
+						<label for="country">Country:</label>
+							<input type="text" name="country" id="country" value="Spain" readonly title="You can modify the default country"><br>
+						<label class="required" for="tel">Telephone:</label>
+							<input type="tel" name="tel" id="tel" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>User Data</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label class="required" for="user">Username:</label>
+							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
+						<label class="required" for="password">Password:</label>
+							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="8 digit minimum" required maxlength="20"><br>
+						<label class="required" for="password2">Repeat password:</label>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="8 digit minimum" required maxlength="20"><br>
+							<input type="hidden" id="textFile" value="Encrypted password">
+					</div>
+					<hr class="y1">
+					<div style="margin-right: 65px;" class="float_right">
+						<label class="required" for="email">E-mail:</label>
+							<input type="email" name="email" id="email" value="" maxlength="30" required><br>
+						<label class="required" for="security_question">Security question:</label>
+							<select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
+								<option value="mascota">What is the name of your pet?</option>
+								<option value="madre">What is the name of your mother?</option>
+								<option value="nacimiento">Which is your born city?</option>
+								<option value="coche">What was your first car?</option>
+							</select>
+							<input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
+					</div>
+					</fieldset>
+					<fieldset>
+					<legend>Hobbys</legend>
+					<hr class="x">
+						<table>
+							<tr>
+								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox">Computing</span></td>
+								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox">Videogames</span></td>
+								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox">Programming</span></td>
+							<tr>
+								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox">Internet</span></td>
+								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox">Friends</span></td>
+								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox">Work</span></td>
+							<tr>
+								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox">Dance</span></td>
+								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox">Cook</span></td>
+								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox">Photography</span></td>
+							<tr>
+								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox">Puzzles</span></td>
+								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox">Read</span></td>
+								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox">Music</span></td>
+							<tr>
+								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox">Do sport</span></td>
+								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox">Shopping</span></td>
+						</table>
+					</fieldset>
+					<fieldset>
+					<legend>Terms & Conditions</legend>
+					<hr class="x">
+						<textarea readonly>
+Article 1. Purpose.
+
+This Act aims to guarantee and protect, with regard to the processing of personal data, public freedoms and fundamental rights of individuals, and especially their honor and personal and family privacy.
+
+Article 2.
+
+Scope.
+
+1. This Act shall apply to personal data recorded in hardware, which makes them susceptible to treatment, and any type of subsequent use of such data by the public and private sectors. This Act by any processing of personal data shall be governed:
+
+a) When the processing is carried out in Spanish territory in the framework of the activities of an establishment of the controller.
+
+b) When the controller is not established on Spanish territory but is subject to Spanish law under rules of public international law.
+
+c) When the controller is not established in the territory of the European Union and used in the treatment means situated in Spanish territory unless such means are used solely for transit purposes.
+
+2. The system of protection of personal data provided for in this Organic Law shall not apply:
+
+Consolidated legislation
+
+Page 1
+
+a) Files maintained by natural persons in the course of a purely personal or household activity.
+
+b) Files subject to the regulations on protection of classified materials.
+
+c) Files established for the investigation of terrorism and serious organized crime. However, in such cases the data controller previously communicated its existence, its general characteristics and purpose of the Data Protection Agency.
+
+3. governed by specific provisions, and especially the provisions, if any, this Organic Law the processing of personal data:
+
+a) Files regulated by the legislation of the electoral system.
+
+b) Those used solely for statistical purposes, and are covered by state or regional legislation on public statistical function.
+
+c) aimed at storing personal data in staff reports that the legislation of staff of the armed forces scheme concerns.
+
+d) Derivatives Civil Registry and the Central Register of Convicted Persons and Rebels.
+
+e) are from images and sound recorded by videocameras for the security forces and, in accordance with the legislation on the subject.
+
+Article 3. Definitions.
+
+For the purposes of this Organic Act, the following definitions apply:
+
+a) Personal data: any information concerning physical persons identified or identifiable.
+
+b) Any organized set of personal data, whatever the form or method of its creation, storage, organization and access.
+
+c) Processing of data: operations and technical procedures of an automated or not, enabling the collection, recording, storage, processing, modification, blocking and cancellation, as well as assignments of data resulting from communications, consultations, interconnections and transfers character.
+
+d) the data controller responsible natural or legal person, public or private, or administrative body which determines the purpose, content and use of the treatment.
+
+e) subject: the person whose data are object of treatment in paragraph c) of this article refers to.
+
+f) Dissociation procedure: any processing of personal data so that the information obtained can not be associated with an identified or identifiable person.
+
+g) Processor: the natural or legal person, public authority, agency or any other body which alone or jointly with others, processes personal data on behalf of the controller.
+
+h) Consent subject: any expression of will, freely given, specific and informed by the data subject consents to the processing of personal data concerning him.
+
+i) Assignment or communication of data: any disclosure of data to a person other than the person concerned.
+
+j) Sources accessible to the public: the files may be inspected by any person, unhindered by a limiting provision or without further requirement that, where appropriate, the payment of a fee. Are considered publicly available sources exclusively the publicity register, telephone directories under the terms provided in the specific regulations and lists of persons belonging to professional associations containing only data on the name, title, profession, activity, academic degree, address and an indication of their group. They also have the character of public sources newspapers and official gazettes and the media.
+
+GOVERNMENT GAZETTE
+Consolidated legislation
+
+Page 2
+
+TITLE II
+
+Principles of data protection
+
+Article 4. Data Quality.
+
+1. Personal data may only be collected for treatment and subjected to such treatment, if they are adequate, relevant and not excessive in relation to the scope and specific, explicit and legitimate purposes for which they were obtained.
+
+2. The personal data object of treatment can not be used for purposes incompatible with those for which the data were collected. It is not considered incompatible further processing of data for historical, statistical or scientific purposes.
+
+3. The personal data shall be accurate and updated so that they respond truthfully to the current situation of the affected.
+
+4. If the registered personal data are inaccurate in whole or in part, or incomplete, they will be canceled and officially replaced by the data corrected or completed, without prejudice to the powers to those affected by Article 16.
+
+5. The personal data will be canceled when no longer necessary or relevant to the purpose for which they were collected or recorded. Not be stored in a way to identify the subjects for longer than is necessary for the purposes according to which they have been collected or recorded.
+
+Regulations the procedure by which, exceptionally, attended historical, statistical or scientific values ​​in accordance with specific legislation is determined, the full maintenance of certain data is decided.
+
+6. The personal data will be stored so as to permit the exercise of the right of access, unless lawfully erased.
+
+7. data collection is prohibited by fraudulent, unfair or illegal. Article 5. Right of information in the data collection.
+
+1. The persons to whom personal data are requested must be previously informed explicitly, precisely and unequivocally:
+
+a) The existence of a file or processing of personal data, the purpose of collecting the data and the recipients of information.
+
+b) The obligatory or voluntary response to questions put to them character.
+
+c) The consequences of obtaining data or the refusal to supply.
+
+d) The possibility of exercising rights of access, rectification, cancellation and opposition.
+
+e) the identity and address of the controller or, where applicable, by his representative.
+
+When the controller is not established in the territory of the European Union and use in treating means situated on Spanish territory, it shall, unless such equipment is used for purposes of processing, a representative in Spain, notwithstanding actions that may be pursued against the controller himself.
+
+2. Where questionnaires or other forms are used for collection shall include in them, clearly legible form, warnings to in the preceding paragraph.
+
+3. the information referred to in subparagraphs b shall not be necessary), c) and d) of paragraph 1 if the content of the information is clear from the nature of the personal data requested or the circumstances in which collected.
+
+4. When personal data have not been obtained from the subject, he must be informed explicitly, precisely and unequivocally by the controller or his representative, within three months following the time of registration of the data, unless it has already been reported previously, the contents of the treatment, the
+
+GOVERNMENT GAZETTE
+Consolidated legislation
+
+Page 3
+
+Source of data as well as the provisions of letters a), d) and e) of paragraph 1 of this article.
+
+5. shall not apply the provisions of the preceding paragraph, when a law specifically provides, when treatment has historical, statistical or scientific purposes, or when the information proves impossible or would involve disproportionate effort in the view of the Agency Data Protection or the equivalent regional body, considering the number of subjects, the age of the data and the possible compensatory measures.
+
+Nor will govern the provisions of the preceding paragraph when the data come from public sources and sent to the activity of advertising or commercial research, in this case, every communication sent to the interested party will be informed of the origin of the data and the identity of the controller and of his rights.
+
+Article 6. Consent of.
+
+1. The processing of personal data require the unequivocal consent of the affected, unless the law provides otherwise.
+
+2. consent is not necessary when personal data are collected for the exercise of the public administrations within the scope of its powers functions; when referring to the parties of a contract or a pre-contract bargaining, employment or administrative relationship, and are necessary for maintenance or fulfillment; when the data processing has the purpose to protect a vital interest of the terms of Article 7 paragraph 6 of this Act, or when the data contained in publicly available sources and its processing is necessary for the purposes of legitimate interests pursued by the data controller or by the third party to whom the data are disclosed, provided that the rights and freedoms of the person concerned are not violated.
+
+3. The consent referred to in this article may be revoked if there is cause for it and will not have retroactive effect.
+
+4. In cases where the consent of the treatment of personal data is not necessary, provided that a law otherwise provides, this may object to their treatment when there are founded and legitimate reasons concerning a specific personal situation. In this case, the data controller shall exclude the data relating to the treatment affected.
+						</textarea>
+						<br>
+							<div id="conditions">
+								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label for="accept_terms">I accept the terms & conditions</label><br>
+								<input type="checkbox" name="reset" id="reset" value="" required><label id="updates" for="reset">I accept to receive updates on </label>
+							</div>
+					</fieldset>
+					<div class="float_none">
+						<input type="submit" onclick="saveTextAsFile()" value="SignUp">
+						<input type="reset" value="Delete fields">
+					</div>
+				</form>
+			</section>
+		</div>
+	<script src="js/efectos.js"></script>
+	<script src="js/efectos.signup.js"></script>
+	</body>
+</html>

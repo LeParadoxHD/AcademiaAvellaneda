@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ca">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jquery.autotab.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+		<link rel="shortcut icon" href="img/favicon.png">
+		<title>Registre - Nou usuari</title>
+	</head>
+	<body>
+		<div id="container">
+			<section id="header">
+				<section id="logo">
+				<img alt="logo" src="img/logo.png" id="logo">
+				</section>
+				<section id="description">
+					<span>
+					Acadèmia Avellaneda<br>
+					Formulari de registre<br>
+					nº 53 article 87 
+					</span>
+				</section>
+			</section>
+			<section id="signup-form"> 
+			<form onsubmit="signup()" action="index.html" enctype="multipart/form-data" method="post">
+			<span id="ad">Camp requerit</span>
+				<fieldset>
+					<legend>Dades personals</legend>
+				<hr class="x">
+				<br>
+				
+					<div class="float_left">
+						<label class="required" for="name">Nom:</label>
+							<input type="text" name="name" id="name" required maxlength="20"><br>
+						<label for="last_name">Cognoms:</label>
+							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
+						<label class="required" for="dni">DNI:</label>
+							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" title="Inserta el teu DNI.Ex. 47293029T" required maxlength="9"><br>
+					</div>
+					<hr class="y1">
+					<div class="float_right" id="first_class">
+						<div>
+						<label class="required" for="born_day">Data de naixement:</label><br>
+							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
+						</div>
+						<label class="required" for="sex">Sexe:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Home</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Dona</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Altres</span>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Localització</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label for="location">Direcció:</label>
+							<input type="text" name="location" id="location" value="" maxlength="40"><br>
+						<label class="required" for="postal">Codi postal:</label>
+							<input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" id="postal" value="" maxlength="5" required><br>
+						<label class="required" for="city">Població:</label>
+							<input type="text" name="city" id="city" value="" maxlength="30" required><br>
+					</div>
+					<hr class="y2">
+					<div style="margin-right: 65px;" class="float_right">
+						<label for="country">País:</label>
+							<input type="text" name="country" id="country" value="España" readonly title="No es posible modificar el contenido"><br>
+						<label class="required" for="tel">Telèfon:</label>
+							<input type="tel" name="tel" id="tel" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
+					</div>
+					</fieldset>
+				<fieldset>
+					<legend>Dades d'usuari</legend>
+				<hr class="x">
+				<br>
+					<div class="float_left">
+						<label class="required" for="user">Nom d'usuari:</label>
+							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
+						<label class="required" for="password">Contrasenya:</label>
+							<input type="password" name="password" pattern="{8,}"  id="password" value="" title="La contrasenya ha de tenir almenys 8 caràcters" required maxlength="20"><br>
+						<label class="required" for="password2">Repetir contrasenya:</label>
+							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" title="La contrasenya ha de tenir almenys 8 caràcters" required maxlength="20"><br>
+							<input type="hidden" id="textFile" value="Contrasenya cifrada">
+					</div>
+					<hr class="y1">
+					<div style="margin-right: 65px;" class="float_right">
+						<label class="required" for="email">Correu electrònic:</label>
+							<input type="email" name="email" id="email" value="" maxlength="30" required><br>
+						<label class="required" for="security_question">Pregunta de seguretat:</label>
+							<select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
+								<option value="mascota">Quin és el nom de la teva mascota?</option>
+								<option value="madre">Quin és el nom de la teva mare?</option>
+								<option value="nacimiento">Quin és el teu lloc de naixement?</option>
+								<option value="coche">Quin va ser el teu primer cotxe?</option>
+							</select>
+							<input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
+					</div>
+					</fieldset>
+					<fieldset>
+					<legend>Hobbis</legend>
+					<hr class="x">
+						<table>
+							<tr>
+								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox">Informàtica</span></td>
+								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox">Videojocs</span></td>
+								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox">Programació</span></td>
+							<tr>
+								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox">Internet</span></td>
+								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox">Amics</span></td>
+								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox">Treballar</span></td>
+							<tr>
+								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox">Ball</span></td>
+								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox">Cuinar</span></td>
+								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox">Fotografía</span></td>
+							<tr>
+								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox">Puzzles</span></td>
+								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox">Llegir</span></td>
+								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox">Mùsica</span></td>
+							<tr>
+								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox">Fer exercici</span></td>
+								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox">Compres</span></td>
+						</table>
+					</fieldset>
+					<fieldset>
+					<legend>Termes i condicions</legend>
+					<hr class="x">
+						<textarea readonly>
+Article 1. Objecte.
+
+Aquesta Llei orgànica té per objecte garantir i protegir, pel que fa al tractament de les dades personals, les llibertats públiques i els drets fonamentals de les persones físiques, i especialment del seu honor i intimitat personal i familiar.
+
+Article 2.
+
+Àmbit d'aplicació.
+
+1. Aquesta Llei orgànica és aplicable a les dades de caràcter personal registrades en suport físic, que les faci susceptibles de tractament, ia tota modalitat d'ús posterior d'aquestes dades pels sectors públic i privat. Es regirà per aquesta Llei orgànica qualsevol tractament de dades de caràcter personal:
+
+a) Quan el tractament s'efectuï en territori espanyol en el marc de les activitats d'un establiment del responsable del tractament.
+
+b) Quan al responsable del tractament no establert en territori espanyol li sigui aplicable la legislació espanyola en aplicació de normes de dret internacional públic.
+
+c) Quan el responsable del tractament no estigui establert en territori de la Unió Europea i utilitzi en el tractament de dades mitjans situats en territori espanyol, llevat que aquests mitjans s'utilitzin únicament amb finalitats de trànsit.
+
+2. El règim de protecció de les dades de caràcter personal que estableix aquesta Llei orgànica no és aplicable:
+
+LEGISLACIÓ CONSOLIDADA
+
+Pàgina 1
+
+a) Als fitxers mantinguts per persones físiques en l'exercici d'activitats exclusivament personals o domèstiques.
+
+b) Als fitxers sotmesos a la normativa sobre protecció de matèries classificades.
+
+c) Als fitxers establerts per a la investigació del terrorisme i de formes greus de delinqüència organitzada. No obstant això, en aquests supòsits el responsable del fitxer ha de comunicar prèviament l'existència del mateix, les seves característiques generals i la finalitat a l'Agència de Protecció de Dades.
+
+3. Es regeixen per les seves disposicions específiques, i pel que preveu especialment, si s'escau, aquesta Llei orgànica els tractaments de dades personals:
+
+a) Els fitxers regulats per la legislació de règim electoral.
+
+b) Els que serveixin a finalitats exclusivament estadístiques, i estiguin emparats per la legislació estatal o autonòmica sobre la funció estadística pública.
+
+c) Els que tinguin per objecte l'emmagatzematge de les dades contingudes en els informes personals de qualificació a què es refereix la legislació del règim del personal de les Forces Armades.
+
+d) Els derivats del Registre Civil i del Registre central de penats i rebels.
+
+e) Els procedents d'imatges i sons obtinguts mitjançant la utilització de videocàmeres per les forces i cossos de seguretat, de conformitat amb la legislació sobre la matèria.
+
+Article 3. Definicions.
+
+Als efectes d'aquesta Llei orgànica, s'entén per:
+
+a) Dades de caràcter personal: qualsevol informació referent a persones físiques identificades o identificables.
+
+b) Fitxer: qualsevol conjunt organitzat de dades de caràcter personal, qualsevol que sigui la forma o modalitat de la seva creació, emmagatzematge, organització i accés.
+
+c) Tractament de dades: operacions i procediments tècnics de caràcter automatitzat o no, que permetin recollir, gravar, conservar, elaborar, modificar, bloquejar i cancel·lar, així com les cessions de dades que resultin de comunicacions, consultes, interconnexions i transferències.
+
+d) Responsable del fitxer o tractament: persona física o jurídica, de naturalesa pública o privada, o òrgan administratiu, que decideixi sobre la finalitat, contingut i ús del tractament.
+
+e) Afectat o interessat: persona física titular de les dades que siguin objecte del tractament a què es refereix l'apartat c) d'aquest article.
+
+f) Procediment de dissociació: qualsevol tractament de dades personals de manera que la informació que s'obtingui no es pugui associar a una persona identificada o identificable.
+
+g) Encarregat del tractament: la persona física o jurídica, autoritat pública, servei o qualsevol altre organisme que, sol o conjuntament amb altres, tracti dades personals per compte del responsable del tractament.
+
+h) Consentiment de l'interessat: tota manifestació de voluntat, lliure, inequívoca, específica i informada, mitjançant la qual l'interessat consenti el tractament de dades personals que el concerneixen.
+
+i) Cessió o comunicació de dades: qualsevol revelació de dades realitzada a una persona diferent de l'interessat.
+
+j) Fonts accessibles al públic: els fitxers que poden ser consultats per qualsevol persona, no impedida per una norma limitativa o sense altra exigència que, si s'escau, l'abonament d'una contraprestació. Tenen la consideració de fonts d'accés públic, exclusivament, el cens promocional, els repertoris telefònics en els termes que preveu la normativa específica i les llistes de persones pertanyents a grups de professionals que continguin únicament les dades de nom, títol, professió, activitat, grau acadèmic, direcció i indicació de la seva pertinença al grup. Així mateix, tenen el caràcter de fonts d'accés públic els diaris i butlletins oficials i els mitjans de comunicació.
+
+BOLETÍN OFICIAL DE L'ESTAT
+LEGISLACIÓ CONSOLIDADA
+
+Pàgina 2
+
+TÍTOL II
+
+Principis de la protecció de dades
+
+Article 4. Qualitat de les dades.
+
+1. Les dades de caràcter personal només es podran recollir per al seu tractament, així com sotmetre-les a aquest tractament, quan siguin adequades, pertinents i no excessives en relació amb l'àmbit i les finalitats determinades, explícites i legítimes per a les quals s'hagin obtingut.
+
+2. Les dades de caràcter personal objecte de tractament no es poden utilitzar per a finalitats incompatibles amb aquelles per a les quals les dades hagin estat recollides. No es considera incompatible el tractament posterior d'aquests amb finalitats històriques, estadístiques o científiques.
+
+3. Les dades de caràcter personal seran exactes i posades al dia de manera que responguin amb veracitat a la situació actual de l'afectat.
+
+4. Si les dades de caràcter personal registrades són inexactes, en tot o en part, o incompletes, seran cancel·lades i substituïdes d'ofici per les corresponents dades rectificades o completades, sens perjudici de les facultats que als afectats reconeix l'article 16.
+
+5. Les dades de caràcter personal han de ser cancel·lades quan hagin deixat de ser necessàries o pertinents per a la finalitat per a la qual han estat recollides o registrades. No seran conservades de manera que permetin identificar l'interessat durant un període superior al necessari per les finalitats d'acord amb les quals hagin estat recollides o registrades.
+
+Reglamentàriament es determinarà el procediment pel qual, per excepció, atesos els valors històrics, estadístics o científics d'acord amb la legislació específica, es decideixi el manteniment íntegre de determinades dades.
+
+6. Les dades de caràcter personal seran emmagatzemades de manera que permetin l'exercici del dret d'accés, llevat que siguin legalment cancel·lades.
+
+7. Es prohibeix la recollida de dades per mitjans fraudulents, deslleials o il·lícits. Article 5. Dret d'informació en la recollida de dades.
+
+1. Els interessats als quals se sol·licitin dades personals han de ser prèviament informats de manera expressa, precisa i inequívoca:
+
+a) De l'existència d'un fitxer o tractament de dades de caràcter personal, de la finalitat de la recollida d'aquests i dels destinataris de la informació.
+
+b) Del caràcter obligatori o facultatiu de la resposta a les preguntes que els siguin plantejades.
+
+c) De les conseqüències de l'obtenció de les dades o de la negativa a subministrar-les.
+
+d) De la possibilitat d'exercitar els drets d'accés, rectificació, cancel·lació i oposició.
+
+e) De la identitat i adreça del responsable del tractament o, si s'escau, del seu representant.
+
+Quan el responsable del tractament no estigui establert en el territori de la Unió Europea i utilitzi en el tractament de dades mitjans situats en territori espanyol, ha de designar, llevat que aquests mitjans s'utilitzin amb finalitats de tràmit, un representant a Espanya, sense perjudici de les accions que es puguin emprendre contra el mateix responsable del tractament.
+
+2. Quan s'utilitzin qüestionaris o altres impresos per a la recollida, han de figurar en els mateixos, de manera clarament llegible, les advertències a què es refereix l'apartat anterior.
+
+3. No serà necessària la informació a què es refereixen les lletres b), c) id) de l'apartat 1 si el contingut de la informació es dedueix clarament de la naturalesa de les dades personals que se sol·liciten o de les circumstàncies en què es recullen.
+
+4. Quan les dades de caràcter personal no hagin estat recollides de l'interessat, aquest haurà de ser informat de manera expressa, precisa i inequívoca, pel responsable del fitxer o el seu representant, dins dels tres mesos següents al moment del registre de les dades, llevat que ja n'hagi estat informat anteriorment, del contingut del tractament, de la
+
+BOLETÍN OFICIAL DE L'ESTAT
+LEGISLACIÓ CONSOLIDADA
+
+Pàgina 3
+
+Procedència de les dades, així com del que preveuen les lletres a), d) ie) de l'apartat 1 d'aquest article.
+
+5. No és aplicable el que disposa l'apartat anterior, quan expressament una llei ho prevegi, quan el tractament tingui finalitats històriques, estadístiques o científiques, o quan la informació a l'interessat resulti impossible o exigeixi esforços desproporcionats, a criteri de l'Agència de Protecció de Dades o de l'organisme autonòmic equivalent, en consideració al nombre d'interessats, a l'antiguitat de les dades ia les possibles mesures compensatòries.
+
+Així mateix, tampoc no regeix el que disposa l'apartat anterior quan les dades procedeixin de fonts accessibles al públic i es destinin a l'activitat de publicitat o prospecció comercial, en aquest cas, en cada comunicació que s'adreci a l'interessat se li informarà de l'origen dels dades i de la identitat del responsable del tractament així com dels drets que l'assisteixen.
+
+Article 6. Consentiment de l'afectat.
+
+1. El tractament de les dades de caràcter personal requereix el consentiment inequívoc de l'afectat, llevat que la llei disposi una altra cosa.
+
+2. No cal el consentiment quan les dades de caràcter personal es recullin per a l'exercici de les funcions pròpies de les administracions públiques en l'àmbit de les seves competències; quan es refereixin a les parts d'un contracte o precontracte d'una relació negocial, laboral o administrativa i siguin necessaris per al seu manteniment o compliment; quan el tractament de les dades tingui per finalitat protegir un interès vital de l'interessat en els termes de l'article 7, apartat 6, d'aquesta Llei, o quan les dades figurin en fonts accessibles al públic i el seu tractament sigui necessari per a la satisfacció de l'interès legítim perseguit pel responsable del fitxer o pel del tercer a qui es comuniquin les dades, sempre que no es vulnerin els drets i llibertats fonamentals de l'interessat.
+
+3. El consentiment a què es refereix aquest article pot ser revocat quan hi hagi una causa justificada per a això i no se li atribueixin efectes retroactius.
+
+4. En els casos en què no sigui necessari el consentiment de l'afectat per al tractament de les dades de caràcter personal, i sempre que una llei no disposi el contrari, aquest pot oposar-se al seu tractament quan hi hagi motius fundats i legítims relatius a una concreta situació personal. En aquest supòsit, el responsable del fitxer exclourà del tractament les dades relatives a l'afectat.
+						</textarea>
+						<br>
+							<div id="conditions">
+								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label for="accept_terms">Accepto els termes i condicions</label><br>
+								<input type="checkbox" name="reset" id="reset" value="" required><label id="updates" for="reset">Accepto rebre actualitzacions en </label>
+							</div>
+					</fieldset>
+					<div class="float_none">
+						<input type="submit" onclick="saveTextAsFile()" value="Registrarse">
+						<input type="reset" value="Borrar camps">
+					</div>
+				</form>
+			</section>
+		</div>
+	<script src="js/efectos.js"></script>
+	<script src="js/efectos.signup.js"></script>
+	</body>
+</html>
