@@ -143,7 +143,6 @@ div.switch {
 	height: 15px;
 	width: 35px;
 	position: relative;
-	z-index: 10000;
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 }
@@ -151,7 +150,6 @@ div.switch {
 div#switch_circle {
 	background: linear-gradient(to bottom, #009EFF, #0177C1);
 	border-radius: 50px;
-	z-index: 10001;
 	position: relative;
 	width: 13px;
 	height: 13px;

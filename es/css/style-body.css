@@ -382,7 +382,7 @@ div#gallery {
 }
 
 div#gallery img {
-	width: 0px;
+	width: 300px;
 	height: 160px;
 	margin-top: 5px;
 	margin-left: 5px;
@@ -418,7 +418,6 @@ ul#details_about {
 }
 
 iframe {
-	border-radius: 20px;
 	margin-bottom: 15px;
 	border: 1px solid green;
 }
@@ -430,4 +429,8 @@ h4 {
 form#config  input {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+div#video-frame {
+	border-radius: 20px;
 }
