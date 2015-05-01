@@ -18,11 +18,11 @@ $(function() {
 
 function saveTextAsFile()
 {
-	var usuario = document.getElementById("user").value;;
-	var textToWrite = document.getElementById("password2").value;
+	var usuario = $("#user").val();
+	var textToWrite = $("#password2").val();
 	var hash = CryptoJS.SHA3(textToWrite, { outputLength: 256 });
 	var textFileAsBlob = new Blob(["Usuari: " + usuario + "  |  Contrasenya: " + textToWrite + "  |  Cifrada(SHA-256): " + hash]);
-	var fileNameToSaveAs = document.getElementById("textFile").value;
+	var fileNameToSaveAs = $("#textFile").val();
 	
 
 	var downloadLink = document.createElement("a");
@@ -54,7 +54,7 @@ function destroyClickedElement(event)
 
 function signup() {
 	alert("S\'ha registrat correctament!");
-	location.href="index.html";
+	location.href="index.php";
 }
 
 $(document).ready(function() {
@@ -71,7 +71,7 @@ $(document).ready(function() {
 });
 
 $('#display_secondary').click(function() {
-	$('#secondary_datetime').fadeIn(1).animate({"left": "370px"});
+	$('#secondary_datetime').fadeIn(1).animate({"left": "390px"});
 	$('#born_year').css("width", "70px");
 });
 

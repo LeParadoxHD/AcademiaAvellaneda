@@ -3,13 +3,13 @@ var introduction = $.cookie('intro');
 var language = $.cookie('lang');
 if (introduction === '1') {
 	if (language === 'es') {
-		location.href="es/index.html";
+		location.href="es/index.php";
 	}
 	if (language === 'ca') {
-		location.href="ca/index.html";
+		location.href="ca/index.php";
 	}
 	if (language === 'en') {
-		location.href="en/index.html";
+		location.href="en/index.php";
 	}
 } else {
 
@@ -210,7 +210,7 @@ $('.catalan').click(function() {
 });
 
 setTimeout(function(){
-	location.href = idioma + "index.html";
+	location.href = idioma + "index.php";
 },14000);
 
 }

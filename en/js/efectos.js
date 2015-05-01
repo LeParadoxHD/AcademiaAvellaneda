@@ -50,7 +50,7 @@ setTimeout(function(){
 		$('#cookie_warning').get(0).style.opacity = "0.7";
 		},3000);
 
-if (archivo === 'index.html') {
+if (archivo === 'index.php') {
     $('#body_form').get(0).style.height = "305px";
 } else {
 	$('.text').get(0).style.height = "15px";
@@ -67,7 +67,7 @@ if (archivo === 'index.html') {
 
 function contact(){
 	alert('It sent your inquiry properly!');
-	location.href="index.html";
+	location.href="index.php";
 }
 // Selector de idioma
 
@@ -174,7 +174,7 @@ if (checkcookie === '1') {
     $('#cookie_warning').get(0).style.display = "none";
 }
 
-if (archivo !== 'index.html') {
+if (archivo !== 'index.php') {
     $('#right_menu').get(0).style.marginRight = "240px";
 }
 
@@ -219,7 +219,7 @@ if (archivo === 'config.html') {
 if (archivo === 'config.html') {
 	if (typeof username === 'undefined') {
 		alert("Permiso denegado!");
-		location.href="index.html";
+		location.href="index.php";
 	};
 };
 
@@ -281,6 +281,7 @@ function switchoff() {
 	$('#switch_circle').css("left", "20px");
 	$('.switch').attr('onclick','switchon()');
 	$('body').css("background", "#1C1C1C");
+	$('#user_active').css("color", "white");
 	$('.switch').css('background','green');
 	$('#off').fadeToggle(300);
 	$('#on').fadeToggle(300);
@@ -291,6 +292,7 @@ function switchon() {
 	$('#switch_circle').css("left", "0px");
 	$('.switch').attr('onclick','switchoff()');
 	$('body').css('background-image', 'url(img/texture_grain.png)');
+	$('#user_active').css("color", "black");
 	$('.switch').css('background','#484747');
 	$('#on').fadeToggle(300);
 	$('#off').fadeToggle(300);

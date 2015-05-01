@@ -49,7 +49,7 @@ function destroyClickedElement(event)
 
 function signup() {
 	alert("Se ha registrado correctamente!");
-	location.href="index.html";
+	location.href="index.php";
 }
 
 $(document).ready(function() {

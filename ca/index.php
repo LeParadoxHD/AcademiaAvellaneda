@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 	<head>
 		<meta charset="utf-8">
 		<!-- LITE
@@ -17,17 +17,17 @@
 		<script src="js/angular.min.js"></script>
 		<!-- Cookies -->
 		<script type="text/javascript" src="js/jquery.cookie.js"></script>
-		<title>Avellaneda Academy - Home</title>
+		<title>Acadèmia Avellaneda - Inici</title>
 	</head>
 	<body>
-	<div id="hashtag"><a class="twitter-timeline" href="https://twitter.com/hashtag/videojuegos" data-widget-id="586488697404665856">Tweets about #videojuegos</a></div>
+	<div id="hashtag"><a class="twitter-timeline" href="https://twitter.com/hashtag/videojuegos" data-widget-id="586488697404665856">Tweets sobre #videojuegos</a></div>
 	<!-- Menú Horizontal de otros proyectos y redes sociales -->
 	<div id="projects">
 		<div id="container_projects">
 			<ul>
-				<li><a><b>Other projects:</b></a></li>
-				<li><img src="img/dash.png" alt="dash-previews"><a id="massaguer" href="http://www.consultoriamassaguer.es/" target="blank">Massaguer Consultancy</a></li>
-				<li><img src="img/dash.png" alt="dash-previews"><a id="plumb" href="http://david.consultoriamassaguer.es/" target="blank">Plumb Constructions</a></li>
+				<li><a><b>Altres projectes:</b></a></li>
+				<li><img src="img/dash.png" alt="dash-previews"><a id="massaguer" href="http://www.consultoriamassaguer.es/" target="blank">Consultoria Massaguer</a></li>
+				<li><img src="img/dash.png" alt="dash-previews"><a id="plumb" href="http://david.consultoriamassaguer.es/" target="blank">Construccions Plumb</a></li>
 				<li>
 					<img src="img/dash.png" alt="dash">
 					<img alt="top-logo" src="img/top-logo.png">
@@ -71,50 +71,50 @@
 				<div id="main_bar">
 				<!-- Menu LvL 1 -->
 				<ul id="script" class="navigation">
-					<li class="left"><a href="index.html"><span><img alt="home-icon" src="img/nav/home.png">Home</span></a></li>
-					<li><a href="gallery.html"><span><img alt="gallery-icon" src="img/nav/gallery.png">Gallery</span></a></li>
-					<li><a href="curses.html"><span><img alt="curses-icon" src="img/nav/curses.png">Curses</span></a>
+					<li class="left"><a href="index.php"><span><img alt="home-icon" src="img/nav/home.png">Inici</span></a></li>
+					<li><a href="gallery.html"><span><img alt="gallery-icon" src="img/nav/gallery.png">Galeria</span></a></li>
+					<li><a href="curses.html"><span><img alt="curses-icon" src="img/nav/curses.png">Cursos</span></a>
 					<!-- Menu LvL 2 -->
 						<ul>
-							<li><a href="curses.html#graphic_design"><span>Graphic design</span></a>
+							<li><a href="curses.html#graphic_design"><span>Diseñy gráfic</span></a>
 							<!-- Menu LvL 3 -->
 								<ul>
-									<li class="lvl2_first"><a href="curses.html#graphic_design-easy"><span>Basic Level</span></a></li>
-									<li class="lvl2_last"><a href="curses.html#graphic_design-advanced"><span>Advanced Level</span></a></li>
+									<li class="lvl2_first"><a href="curses.html#graphic_design-easy"><span>Nivell Bàsic</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#graphic_design-advanced"><span>Nivell Avançat</span></a></li>
 								</ul>
 							</li>
-							<li><a href="curses.html#video"><span>Video editing</span></a>
+							<li><a href="curses.html#video"><span>Edició de vídeo</span></a>
 							<!-- Menu LvL 3 -->
 								<ul>
-									<li class="lvl2_first"><a href="curses.html#video-easy"><span>Basic Level</span></a></li>
-									<li class="lvl2_last"><a href="curses.html#video-advanced"><span>Advanced Level</span></a></li>
+									<li class="lvl2_first"><a href="curses.html#video-easy"><span>Nivell Bàsic</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#video-advanced"><span>Nivell Avançat</span></a></li>
 								</ul>
 							</li>
-							<li><a href="curses.html#audio"><span>Audio editing</span></a>
+							<li><a href="curses.html#audio"><span>Edició d'audio</span></a>
 							<!-- Menu LvL 3 -->
 								<ul>
-									<li class="lvl2_first"><a href="curses.html#audio-easy"><span>Basic Level</span></a></li>
-									<li class="lvl2_last"><a href="curses.html#audio-advanced"><span>Advanced Level</span></a></li>
+									<li class="lvl2_first"><a href="curses.html#audio-easy"><span>Nivell Bàsic</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#audio-advanced"><span>Nivell Avançat</span></a></li>
 								</ul>
 							</li>
-							<li class="double_height"><a href="curses.html#videogame"><span>Videogame<br>programming</span></a>
+							<li class="double_height"><a href="curses.html#videogame"><span>Programació <br>de videojocs</span></a>
 							<!-- Menu LvL 3 -->
 								<ul>
-									<li class="lvl2_first"><a href="curses.html#videogame-easy"><span>Basic Level</span></a></li>
-									<li class="lvl2_last"><a href="curses.html#videogame-advanced"><span>Advanced Level</span></a></li>
+									<li class="lvl2_first"><a href="curses.html#videogame-easy"><span>Nivell Bàsic</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#videogame-advanced"><span>Nivell Avançat</span></a></li>
 								</ul>
 							</li>
-							<li class="double_height last_li"><a href="curses.html#html"><span>Web<br>programming</span></a>
+							<li class="double_height last_li"><a href="curses.html#html"><span>Programació Web</span></a>
 							<!-- Menu LvL 3 -->
 								<ul>
-									<li class="lvl2_first"><a href="curses.html#html-easy"><span>Basic Level</span></a></li>
-									<li class="lvl2_last"><a href="curses.html#html-advanced"><span>Advanced Level</span></a></li>
+									<li class="lvl2_first"><a href="curses.html#html-easy"><span>Nivell Bàsic</span></a></li>
+									<li class="lvl2_last"><a href="curses.html#html-advanced"><span>Nivell Avançat</span></a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-					<li><a href="contact.html"><span><img alt="message-icon" src="img/nav/message.png">Contact</span></a></li>
-					<li><a href="about.html"><span><img alt="about-icon" src="img/nav/question.png">About us..</span></a></li>
+					<li><a href="contact.html"><span><img alt="message-icon" src="img/nav/message.png">Contacte</span></a></li>
+					<li><a href="about.html"><span><img alt="about-icon" src="img/nav/question.png">Sobre de..</span></a></li>
 					<li id="tmp_last_li" class="right"><a href="https://www.youtube.com/user/esiuclm" target="blank"><span><img alt="youtube-icon" src="img/nav/youtube.png">YouTube</span></a></li>
 				</ul>
 				</div>
@@ -125,7 +125,7 @@
 			<img alt="logo" id="logo2" src="img/logo.png">
 			<div id="main_bar_mobile">
 				<ul class="bar_mobile">
-					<li class="first_mobile_li"><span><a href="index.html">Inicio</a></span></li>
+					<li class="first_mobile_li"><span><a href="index.php">Inicio</a></span></li>
 					<li id="action_item_gallery">Galería
 						<div id="item_gallery">
 						<ul>
@@ -197,43 +197,43 @@
 	<!-- Contenido -->
 	<div id="body_form" class="first_content">
 			<div id="help_widget">
-				<a href="https://github.com/LeParadoxHD/AcademiaAvellaneda" target="blank">Source Code</a>
+				<a href="https://github.com/LeParadoxHD/AcademiaAvellaneda" target="blank">Codi font</a>
 			</div>
 			<div id="enc_title">
-				<h1>Who are we?</h1>
+				<h1>Qui som?</h1>
 				<img id="h1-corner" alt="h1-corner" src="img/h1-corner.png">
 			</div>
 			<div class="text">
 				<div id="text-left">
-					<p>Our company specializes in teaching courses over future employment in the current market Academy took 10 years and currently offer courses teaching graphic design, video editing and audio, and video game programming and HTML and CSS. Our current fame is given by our teaching methods and offer an almost certain job prospects.</p>
+					<p>Som una acadèmia especialitzada en l'ensenyament dels cursos amb més futur laboral en el mercat actual, portem 10 anys ensenyant i actualment realitzem cursos de disseny gràfic, edició de vídeo i àudio, i programació de videojocs i HTML i CSS. La nostra actual fama és donada pel nostre mètodes d'ensenyament i per oferir una sortida laboral gairebé segura.</p>
 				</div>
 				<div id="text-right">
 					<img alt="html5-logo" src="img/html5-logo.jpg">
 				</div>
 				<div id="text-both">
-					<p>We have great sponsors to teach all students need to leave the labor market, such as; Cisco, Samsung, SONY, and others.</p>
+					<p>Tenim grans patrocinadors per poder ensenyar tot el que els alumnes necessiten per poder sortir al mercat laboral, com; Cisco, Samsung, SONY, i altres.</p>
 				</div>
 			</div>
 			<div id="second_content">
 			<!-- Título del cuerpo -->
 			<div class="title">
-				<h1>Information</h1>
+				<h1>Informació</h1>
 					<img src="img/curse-corner-left.png" alt="curse-corner-left" class="curse-corner-left">
 					<img src="img/curse-corner-right.png" alt="curse-corner-right" class="curse-corner-right">
 			</div>
 			<!-- Contenido -->
 			<ul id="details">
-					<li><b>Name:</b> Acadèmia d’informàtica Avellaneda </li>
-					<li><b>Location:</b> Carrer del mossos, 23</li>
-					<li><b>City:</b> Badalona</li>
+					<li><b>Nom:</b> Acadèmia d’informàtica Avellaneda </li>
+					<li><b>Direcció:</b> Carrer del mossos, 23</li>
+					<li><b>Ciutat:</b> Badalona</li>
 					<li><b>CIF:</b> B-65748243</li>
-					<li><b>Telephone:</b> 93 460 37 52</li>
+					<li><b>Telèfon:</b> 93 460 37 52</li>
 				</ul>
 			</div>
 			<div id="third_content">
 			<!-- Título del cuerpo -->
 			<div class="special" id="enroll">
-				<h1>Registration form</h1>
+				<h1>Formulari d'inscripció</h1>
 					<img src="img/enroll-corner-left.png" alt="curse-corner-left" class="curse-corner-left">
 					<img src="img/enroll-corner-right.png" alt="curse-corner-right" class="curse-corner-right">
 			</div>
@@ -242,39 +242,39 @@
 				<!-- Formulario de inscripción -->
 				<form id="enroll_form" onsubmit="enrollok()" enctype="multipart/form-data" method="post">
 					<fieldset>
-						<legend>DATA</legend>
+						<legend>DADES</legend>
 							<table>
 								<!-- Columna 1 -->
 								<tr>
 									<td id="first_td">
-										<label for="enroll_name">Name:</label>
-											<input type="text" value="" name="enroll_name" id="enroll_name" placeholder="User" required>
-										<label for="enroll_last_name">Last Name:</label>
-											<input type="text" value="" name="enroll_last_name" id="enroll_last_name" placeholder="Last Name" required>
+										<label for="enroll_name">Nom:</label>
+											<input type="text" value="" name="enroll_name" id="enroll_name" placeholder="Usuari" required>
+										<label for="enroll_last_name">Cognoms:</label>
+											<input type="text" value="" name="enroll_last_name" id="enroll_last_name" placeholder="Cognoms" required>
 										<label for="enroll_name">DNI:</label>
 											<input type="text" value="" name="enroll_dni" placeholder="DNI" id="enroll_dni" required>
 									</td>
 									<!-- Columna 2 -->
 									<td id="second_td">
-										<label class="now_curse" for="now_curse">Select curse:</label>
+										<label class="now_curse" for="now_curse">Seleccioni curs:</label>
 											<select id="now_curse">
-												<optgroup label="Graphic design">
-													<option value="graphic_simple">Basic Level</option>
- 													<option value="graphic_advanced">Advanced Level</option>
-												<optgroup label="Video editing">
-													<option value="graphic_simple">Basic Level</option>
- 													<option value="graphic_advanced">Advanced Level</option>
-												<optgroup label="Audio editing">
-													<option value="graphic_simple">Basic Level</option>
- 													<option value="graphic_advanced">Advanced Level</option>
-												<optgroup label="Videogame programming">
-													<option value="graphic_simple">Basic Level</option>
- 													<option value="graphic_advanced">Advanced Level</option>
-												<optgroup label="HTML & CSS Programming">
-													<option value="graphic_simple">Basic Level</option>
- 													<option value="graphic_advanced">Advanced Level</option>
+												<optgroup label="Diseny gràfic">
+													<option value="graphic_simple">Nivell Bàsic</option>
+ 													<option value="graphic_advanced">Nivell Avançat</option>
+												<optgroup label="Edició de video">
+													<option value="graphic_simple">Nivell Bàsic</option>
+ 													<option value="graphic_advanced">Nivell Avançat</option>
+												<optgroup label="Edició d'audio">
+													<option value="graphic_simple">Nivell Bàsic</option>
+ 													<option value="graphic_advanced">Nivell Avançat</option>
+												<optgroup label="Programació de videojocs">
+													<option value="graphic_simple">Nivell Bàsic</option>
+ 													<option value="graphic_advanced">Nivell Avançat</option>
+												<optgroup label="Programació HTML i CSS">
+													<option value="graphic_simple">Nivell Bàsic</option>
+ 													<option value="graphic_advanced">Nivell Avançat</option>
 											</select>
-										<input type="submit" value="Send">
+										<input type="submit" value="Envia">
 									<img alt="ok" src="img/ok.png" id="ok">
 							</table>
 					</fieldset>
@@ -288,17 +288,17 @@
 			<!-- Inicio de sesión -->
 				<div id="login_layer">
 				<form onsubmit="return login() || active()" enctype="multipart/form-data" method="post">
-					<label for="user">User:</label>
-						<input placeholder="User" type="text" name="user" maxlength="20" id="user" value="" required>
-					<label for="password">Password:</label>
-						<input placeholder="Password" type="password" name="password" id="password" value="" required>
-						<input type="submit" id="signin" value="SignIn">
+					<label for="user">Usuari:</label>
+						<input placeholder="Usuari" type="text" name="user" maxlength="20" id="user" value="" required>
+					<label for="password">Contrasenya:</label>
+						<input placeholder="Contrasenya" type="password" name="password" id="password" value="" required>
+						<input type="submit" id="signin" value="Accedir">
 				</form>
-				<input type="submit" id="signup" value="SignUp">
+				<input type="submit" id="signup" value="Registrarse">
 				</div>
 			<!-- Registro -->
 				<div id="registro">
-					<h2>Registro</h2>
+					<h2>Registre</h2>
 					<form onsubmit="signup()" enctype="multipart/form-data" method="post">
 						<label for="signup-user">Usuario:</label>
 							<input placeholder="Usuario" type="text" name="signup-user" id="signup-user" value="" required>
@@ -308,10 +308,10 @@
 							<input type="password" placeholder="Contraseña" name="signup-password-verify" id="signup-password-verify" value="" required>
 							<input type="submit" id="signup-ok" value="Registrarse">
 					</form>
-					<button id="go_back">Volver</button>
+					<button id="go_back">Tornar</button>
 				</div>
 			<!-- Cookies Ayuda -->
-				<a href="cookies.html">Problems with Cookies?</a>
+				<a href="cookies.html">¿Tens problemes de Cookies?</a>
 					<div onclick="switchoff()" class="switch">
 						<div id="switch_circle"></div>
 						<div id="switch_bg"></div>
@@ -329,12 +329,12 @@
 		<footer id="copyright">
 			<a href="https://www.moodle.org/" target="blank"><img alt="moodle" src="img/moodle.png"></a>
 			<a href="https://www.netacad.com" target="blank"><img alt="cisco" src="img/cisco.png"></a>
-			<span>Avellaneda Academy &copy;<br>All rights reserved.</span>
+			<span>Academia Avellaneda &copy;<br>Tots els drets reservats.</span>
 		</footer>
 	</div>
 	<div id="filled_footer">&nbsp;</div>
 	<div id="cookie_warning">
-		We use Cookies to improve the user experience.<div id="accept_cookies">OK</div>
+		Utilitcem Cookies per millorar l'experiència d'usuari.<div id="accept_cookies">OK</div>
 	</div>
 	<!-- Post-Efectos JavaScript -->
 	<script type="text/javascript" src="js/efectos.js"></script>
