@@ -65,6 +65,10 @@ $(document).ready(function() {
 	});
 });
 
+$('#display_secondary').click(function() {
+	$('#secondary_datetime').toggle(300);
+});
+
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });
 $('#born_month').autotab({ format: 'alphanumeric', target: '#born_year', previous: '#born_day' });
 $('#born_year').autotab({ format: 'alphanumeric', previous: '#born_month' });

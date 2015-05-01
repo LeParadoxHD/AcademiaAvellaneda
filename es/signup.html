@@ -44,14 +44,18 @@
 					<div class="float_right" id="first_class">
 						<div>
 						<label class="required" for="born_day">Fecha de nacimiento:</label><br>
+							<input type="datetime-local" id="date" name="date">
+							<span id="display_secondary">Click si no te funciona</span><br><br>
+						</div>
+						<label class="required" for="sex">Sexo:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox ie">Hombre</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox ie">Mujer</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox ie">Otros</span>
+						<div id="secondary_datetime">
 							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
 							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
 							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
 						</div>
-						<label class="required" for="sex">Sexo:</label><br>
-							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Hombre</span>
-							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Mujer</span>
-							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Otros</span>
 					</div>
 					</fieldset>
 				<fieldset>
@@ -107,24 +111,24 @@
 					<hr class="x">
 						<table>
 							<tr>
-								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox">Informática</span></td>
-								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox">Videojuegos</span></td>
-								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox">Programación</span></td>
+								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox ie">Informática</span></td>
+								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox ie">Videojuegos</span></td>
+								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox ie">Programación</span></td>
 							<tr>
-								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox">Internet</span></td>
-								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox">Amigos</span></td>
-								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox">Trabajar</span></td>
+								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox ie">Internet</span></td>
+								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox ie">Amigos</span></td>
+								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox ie">Trabajar</span></td>
 							<tr>
-								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox">Baile</span></td>
-								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox">Cocinar</span></td>
-								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox">Fotografía</span></td>
+								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox ie">Baile</span></td>
+								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox ie">Cocinar</span></td>
+								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox ie">Fotografía</span></td>
 							<tr>
-								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox">Puzzles</span></td>
-								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox">Leer</span></td>
-								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox">Música</span></td>
+								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox ie">Puzzles</span></td>
+								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox ie">Leer</span></td>
+								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox ie">Música</span></td>
 							<tr>
-								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox">Hacer ejercicio</span></td>
-								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox">Compras</span></td>
+								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox ie">Hacer ejercicio</span></td>
+								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox ie">Compras</span></td>
 						</table>
 					</fieldset>
 					<fieldset>
@@ -265,8 +269,8 @@ Artículo 6. Consentimiento del afectado.
 						</textarea>
 						<br>
 							<div id="conditions">
-								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label for="accept_terms">Acepto los términos y condiciones</label><br>
-								<input type="checkbox" name="reset" id="reset" value="" required><label id="updates" for="reset">Acepto recibir actualizaciones en  </label>
+								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label class="ie" for="accept_terms">Acepto los términos y condiciones</label><br>
+								<input type="checkbox" name="reset" id="reset" value="" required><label class="ie" id="updates" for="reset">Acepto recibir actualizaciones en  </label>
 							</div>
 					</fieldset>
 					<div class="float_none">

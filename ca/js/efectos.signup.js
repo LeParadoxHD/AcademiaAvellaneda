@@ -63,11 +63,15 @@ $(document).ready(function() {
 		var retypepass = $("#password2").attr("value");
 		
 		if(pass == retypepass){
-			$("#passerror").html("Contraseñas coinciden").css({"color":"green"});
+			$("#passerror").html("Contrasenyes coincideixen").css({"color":"green"});
 		} else {
-			$("#passerror").html("Contraseñas no coinciden").css({"color":"red"});
+			$("#passerror").html("Contrasenyes no coincideixen").css({"color":"red"});
 		}
 	});
+});
+
+$('#display_secondary').click(function() {
+	$('#secondary_datetime').toggle(300);
 });
 
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });

@@ -58,11 +58,15 @@ $(document).ready(function() {
 		var retypepass = $("#password2").attr("value");
 		
 		if(pass == retypepass){
-			$("#passerror").html("Contraseñas coinciden").css({"color":"green"});
+			$("#passerror").html("Passwords match").css({"color":"green"});
 		} else {
-			$("#passerror").html("Contraseñas no coinciden").css({"color":"red"});
+			$("#passerror").html("Passwords not match").css({"color":"red"});
 		}
 	});
+});
+
+$('#display_secondary').click(function() {
+	$('#secondary_datetime').toggle(300);
 });
 
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });

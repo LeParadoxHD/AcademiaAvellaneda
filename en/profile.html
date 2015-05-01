@@ -44,14 +44,18 @@
 					<div class="float_right" id="first_class">
 						<div>
 						<label class="required" for="born_day">Date of birth:</label><br>
+							<input type="datetime-local" id="date" name="date">
+							<span id="display_secondary">Click if it doesn't work as well</span><br><br>
+						</div>
+						<label class="required" for="sex">Sex:</label><br>
+							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox ie">Man</span>
+							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox ie">Woman</span>
+							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox ie">Others</span>
+						<div id="secondary_datetime">
 							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
 							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
 							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
 						</div>
-						<label class="required" for="sex">Sex:</label><br>
-							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox">Man</span>
-							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox">Woman</span>
-							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox">Others</span>
 					</div>
 					</fieldset>
 				<fieldset>
