@@ -1,11 +1,12 @@
 body {
 	font-family: Calibri;
 	background: #f1f1f1;
-	width: 700px;
+	width: 750px;
 	margin: 0 auto;
 	margin-top: 30px;
 	user-select: none;
 	-webkit-user-select: none;
+	margin-bottom: 30px;
 }
 
 div#container {
@@ -14,8 +15,6 @@ div#container {
 	background: #fff;
 	box-shadow: 0 1px 3px rgba(0,0,0,.13);
 	padding: 20px;
-	border-radius: 3px;
-	margin-bottom: 30px;
 }
 
 section#header {
@@ -46,8 +45,10 @@ section#logo {
 
 section#description {
 	float: right;
+	position: relative;
 	text-align: right;
 	margin-top: 20px;
+	right: 50px;
 }
 
 img#logo {
@@ -172,23 +173,22 @@ input[type=radio] {
 }
 
 input[type=datetime-local] {
-	width: 220px;
+	width: 200px;
 	height: 20px;
 	font-size: 10pt;
 	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 div#secondary_datetime {
 	position: absolute;
-	top: 120px;
-	left: 610px;
+	top: 115px;
+	left: 730px;
 	background-color: white;
 	padding: 10px;
 	height: 45px;
-	width: 220px;
+	width: 205px;
 	border-radius: 20px;
-	border: 1px solid #00ABF4;
-	box-shadow: 0px 0px 10px #00ABF4;
 	display: none;
 }
 
@@ -228,7 +228,7 @@ textarea {
 	text-align: justify;
 	font-family: Arial;
 	padding: 20px;
-	margin-left: 45px;
+	margin-left: 75px;
 	margin-top: 10px;
 	border-radius: 5px;
 	background: #fbfbfb;

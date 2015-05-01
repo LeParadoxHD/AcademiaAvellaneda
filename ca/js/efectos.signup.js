@@ -58,23 +58,23 @@ function signup() {
 }
 
 $(document).ready(function() {
-	$("#password2").bind("keyup", function () {
-		var pass = $("#password").attr("value");
-		var retypepass = $("#password2").attr("value");
+	$("#password2").keyup(function () {
+		var pass1 = $("#password").val();
+		var pass2 = $("#password2").val();
 		
-		if(pass == retypepass){
-			$("#passerror").html("Contrasenyes coincideixen").css({"color":"green"});
+		if(pass1 == pass2){
+			$("#passerror").text("Contrasenyes coincideixen").css("color", "green");
 		} else {
-			$("#passerror").html("Contrasenyes no coincideixen").css({"color":"red"});
+			$("#passerror").text("Contrasenyes no coincideixen").css("color", "red");
 		}
 	});
 });
 
 $('#display_secondary').click(function() {
-	$('#secondary_datetime').toggle(300);
+	$('#secondary_datetime').fadeIn(1).animate({"left": "370px"});
+	$('#born_year').css("width", "70px");
 });
 
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });
 $('#born_month').autotab({ format: 'alphanumeric', target: '#born_year', previous: '#born_day' });
 $('#born_year').autotab({ format: 'alphanumeric', previous: '#born_month' });
-

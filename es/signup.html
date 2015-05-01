@@ -1,16 +1,17 @@
-<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
 		<script type="text/javascript" src="js/jquery.autotab.js"></script>
 		<script type="text/javascript" src="js/jquery.cookie.js"></script>
 		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 		<link rel="shortcut icon" href="img/favicon.png">
 		<title>Registro - Nuevo usuario</title>
 	</head>
-	<body>
+	<body id="vertical-content">
 		<div id="container">
 			<section id="header">
 				<section id="logo">
@@ -90,7 +91,7 @@
 						<label class="required" for="password2">Repetir contraseña:</label>
 							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" required maxlength="20"><br>
 							<span id="passerror"></span>
-							<input type="hidden" id="textFile" value="Contraseña cifrada">
+							<input type="hidden" id="textFile" value="Contraseña cifrada.txt">
 					</div>
 					<hr class="y1">
 					<div style="margin-right: 65px;" class="float_right">
@@ -282,5 +283,17 @@ Artículo 6. Consentimiento del afectado.
 		</div>
 	<script src="js/efectos.js"></script>
 	<script src="js/efectos.signup.js"></script>
+	<script>
+  (function($){
+    $(document).ready(function(){
+      $("#vertical-content").mCustomScrollbar({
+        theme:"dark-3",
+        scrollButtons:{
+          enable:true
+        }
+      });
+    });
+  })(jQuery);
+</script>
 	</body>
 </html>
