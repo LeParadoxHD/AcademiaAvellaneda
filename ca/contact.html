@@ -20,6 +20,30 @@
 		<title>Acadèmia Avellaneda - Contacte</title>
 	</head>
 	<body>
+	<div id="banner-cookies">
+		<div class="bottom-shadow"></div>
+		<div class="cookies-text">
+				<p>Utilitzem cookies per poder oferir la millor experiència al usuari, més concretament:</p>
+					<br>
+					<ul class="lista_normal">
+						<li>Recordar si s'ha acceptat l'avís de Cookies. (expira 24h)</li>
+						<li>Guardar el nom d'usuari i tancar la seva sesió. (expira 24h)</li>
+					</ul>
+				<p>Si estas visualitzant aquesta pàgina web en mode local, és a dir; "file:///" o 192.168.1.x, etc. Es molt probable que las cookies estiguin desactivades pel propi navegador, per activar el mode local segueix aquests pasos:</p>
+					<br>
+					<ul class="lista_normal">
+						<li><b>Chrome:</b> Crea un accés directe de Chrome i en les propietats afegeix-li el paràmetre '--enable-file-cookies'.
+						<li><b>Firefox:</b> Por defecte, almenys a la última versió (36), accepta les cookies locales, per lo que no es necesari cal cambi.
+						<li><b>Internet Explorer:</b> Siii, a partir d'Internet Explorer 11, accepta less Cookies locals només donant clic en "Permetre Cookies bloquejades" quan ho pregunti. Well Do It Microsoft!
+						<li><b>Opera:</b> No es pot, es pot amb l'extensió 'EditThisCookie', perè no és pla d'instalar extensions per la correcta visualització de la web.</li>
+					</ul>
+		</div>
+		<div id="download-browser">
+			<a href="https://www.google.com/chrome/browser/desktop/index.html" target="blank"><div id="download-chrome"><img src="img/chrome_icon.png" alt="Google Chrome" title="Google Chrome">CHROME</div></a>
+			<a href="https://www.mozilla.org/firefox" target="blank"><div id="download-firefox"><img src="img/firefox_icon.png" alt="Mozilla Firefox" title="Mozilla Firefox">FIREFOX</div></a>
+			<a href="http://windows.microsoft.com/internet-explorer" target="blank"><div id="download-explorer"><img src="img/explorer_icon.png" alt="Internet Explorer" title="Internet Explorer">IEXPLORER</div></a>
+		</div>
+	</div>
 	<div id="hashtag"><a class="twitter-timeline" href="https://twitter.com/hashtag/videojuegos" data-widget-id="586488697404665856">Tweets sobre #videojocs</a></div>
 	<!-- Menú Horizontal de otros proyectos i redes sociales -->
 	<div id="projects">
@@ -249,7 +273,7 @@
 					<button id="go_back">Tornar</button>
 				</div>
 			<!-- Cookies Ayuda -->
-				<a href="cookies.html">¿Tens problemes de Cookies?</a>
+				<span id="display_cookies">¿Tens problemes de Cookies?</span><br>
 					<div onclick="switchoff()" class="switch">
 						<div id="switch_circle"></div>
 						<div id="switch_bg"></div>

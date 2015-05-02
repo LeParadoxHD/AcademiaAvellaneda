@@ -5,6 +5,12 @@
 	padding: 0;
 }
 
+@font-face{
+    font-family: "American Captain";
+    src: url('American Captain.ttf'),
+    url('American Captain.otf'); /* IE */
+}
+
 /* Centramos mejor toda la web */
 
 html {
@@ -598,4 +604,147 @@ img[alt=config-icon] {
 	top: 0px;
 	left: 0px;
 	position: absolute;
+}
+
+
+div#banner-cookies {
+	height: 500px;
+	width: 700px;
+	margin: 0 auto;
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	margin-left: -370px;
+	background: linear-gradient(to bottom, #58D3F7, #0184D6);
+	z-index: 999999;
+	border: 1px solid #0174DF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0px 1px 15px #000000, 0px 0px 10px #0174DF inset;
+	padding: 0px;
+	display: none;
+}
+
+div.bottom-shadow {
+	box-shadow: 0px 5px 15px #000000;
+	width: 107%;
+	height: 30px;
+	position: relative;
+	top: -52px;
+	left: -22px;
+}
+
+div.cookies-text {
+	margin-top: -20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 10pt;
+	display: none;
+}
+
+div.cookies-text ul li {
+	font-size: 10pt !important;
+}
+
+div#download-browser {
+	position: absolute;
+	bottom: 100px;
+	left: -0.5px;
+}
+
+#download-chrome, #download-firefox, #download-explorer {
+	background-image: url("../img/texture-paper.jpg");
+	height: 100px;
+	width: 233px;
+	color: orangered;
+	font-size: 17pt;
+	border: 1px solid #0174DF;
+	text-align: center;
+	display: inline-block;
+	line-height: 100px;
+	letter-spacing: 2px;
+}
+
+#download-chrome {
+	border-bottom-left-radius: 9px;
+	font-family: "American Captain";
+	background: url("../img/texture-paper.jpg");
+	position: absolute;
+}
+
+#download-chrome:hover {
+    background: #FF8000;
+	color: #F2F2F2;
+	cursor: pointer;
+}
+
+#download-chrome span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#download-chrome img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: -10px;
+}
+
+#download-firefox span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#download-firefox img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: -10px;
+}
+
+#download-firefox {
+	font-family: "American Captain";
+	position: absolute;
+	left: 233px;
+}
+
+#download-firefox:hover {
+	background: #FF8000;
+	color: #F2F2F2;
+	cursor: pointer;
+}
+
+#display_cookies {
+	color: blue;
+}
+
+#display_cookies:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#download-explorer {
+	font-family: "American Captain";
+	background: url("../img/texture-paper.jpg");
+	position: absolute;
+	left: 467px;
+	border-bottom-right-radius: 9px;
+}
+
+#download-explorer:hover {
+    background: #FF8000;
+	color: #F2F2F2;
+	cursor: pointer;
+}
+
+#download-explorer span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#download-explorer img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: -10px;
 }

@@ -306,6 +306,26 @@ function switchon() {
 	$('#off').fadeToggle(300);
 };
 
+$('#display_cookies').attr('onclick','showcookies()');
+
+function showcookies() {
+	$('#banner-cookies').slideDown(200);
+	$('.cookies-text').slideDown(200);
+	$('#display_cookies').attr('onclick','hidecookies()');
+	setTimeout(function(){
+		$('#banner-cookies').animate({height: "450px"}, 200);
+	}, 1);
+}
+
+function hidecookies(){
+	$('#banner-cookies').slideUp(200);
+	$('.cookies-text').slideUp(200);
+	$('#display_cookies').attr('onclick','showcookies()');
+	setTimeout(function(){
+		$('#banner-cookies').animate({height: "500px"}, 200);
+	}, 1);
+}
+
 //
 //if(typeof username === 'undefined'){
   //document.getElementById("user_active").style.display = "none";

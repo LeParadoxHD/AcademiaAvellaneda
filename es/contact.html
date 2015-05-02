@@ -20,6 +20,30 @@
 		<title>Acadèmia Avellaneda - Contacto</title>
 	</head>
 	<body>
+	<div id="banner-cookies">
+		<div class="bottom-shadow"></div>
+		<div class="cookies-text">
+				<p>Utilizamos cookies para poder ofrecer la mejor experiencia al usuario, más concretamente:</p>
+				<br>
+					<ul class="lista_normal">
+						<li>Recordar si se ha aceptado el aviso de Cookies. (expira 24h)</li>
+						<li>Guardar el nombre de usuario y cerrar su sesión. (expira 24h)</li>
+					</ul>
+				<p>Si estas visualizando esta página web en modo local, es decir; "file:///" o 192.168.1.x, etc. Es muy probable que las cookies sean desactivadas por el propio navegador, para activar en modo local sigue estos pasos:</p>
+				<br>
+					<ul class="lista_normal">
+						<li><b>Chrome:</b> Crea un acceso directo de Chrome y en las propiedades añádale el parámetro '--enable-file-cookies'.
+						<li><b>Firefox:</b> Por defecto, al menos en la última versión (36), acepta la cookies locales, por lo que no es necesario ningún ajuste.
+						<li><b>Internet Explorer:</b> Siii, a partir de Internet Explorer 11, acepta las Cookies locales solo dando un clic en "Permitir Cookies bloqueadas" cuando lo pregunte. Well Do It Microsoft!
+						<li><b>Opera:</b> No se puede, se puede con la extensión 'EditThisCookie', pero no es plan de instalar extensiones para la correcta visualización de la web.</li>
+					</ul>
+		</div>
+		<div id="download-browser">
+			<a href="https://www.google.com/chrome/browser/desktop/index.html" target="blank"><div id="download-chrome"><img src="img/chrome_icon.png" alt="Google Chrome" title="Google Chrome">CHROME</div></a>
+			<a href="https://www.mozilla.org/firefox" target="blank"><div id="download-firefox"><img src="img/firefox_icon.png" alt="Mozilla Firefox" title="Mozilla Firefox">FIREFOX</div></a>
+			<a href="http://windows.microsoft.com/internet-explorer" target="blank"><div id="download-explorer"><img src="img/explorer_icon.png" alt="Internet Explorer" title="Internet Explorer">IEXPLORER</div></a>
+		</div>
+	</div>
 	<div id="hashtag"><a class="twitter-timeline" href="https://twitter.com/hashtag/videojuegos" data-widget-id="586488697404665856">Tweets sobre #videojuegos</a></div>
 	<!-- Menú Horizontal de otros proyectos y redes sociales -->
 	<div id="projects">
@@ -249,7 +273,7 @@
 					<button id="go_back">Volver</button>
 				</div>
 			<!-- Cookies Ayuda -->
-				<a href="cookies.html">¿Tienes problemas de Cookies?</a>
+				<span id="display_cookies">¿Tienes problemas de Cookies?</span><br>
 					<div onclick="switchoff()" class="switch">
 						<div id="switch_circle"></div>
 						<div id="switch_bg"></div>
