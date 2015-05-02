@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" oncontextmenu="return false">
 	<head>
 		<meta charset="utf-8">
 		<!-- LITE

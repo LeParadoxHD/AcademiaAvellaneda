@@ -4,6 +4,14 @@ var subarchivo = window.location.href.substring(window.location.href.lastIndexOf
 
 // Transiciones
 
+document.onmousedown=disableclick;
+function disableclick(event){
+  if(event.button==2)
+   {
+     return false;    
+   }
+}
+
 window.onload = function transiciones() {
 	$('#body_form').get(0).style.marginLeft = "-50px";
 	$('#body_form').get(0).style.opacity = '1';

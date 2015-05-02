@@ -2,6 +2,14 @@
 var archivo = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 var subarchivo = window.location.href.substring(window.location.href.lastIndexOf("#") + 1);
 
+document.onmousedown=disableclick;
+function disableclick(event){
+  if(event.button==2)
+   {
+     return false;    
+   }
+}
+
 // Transiciones
 
 window.onload = function transiciones() {
