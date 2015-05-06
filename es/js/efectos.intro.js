@@ -47,8 +47,9 @@ setTimeout(function(){
 	$('#percent').text("Guardando cach\u00E9..");
 	$('#bar').css("width", "10px");
 },2000);
+
 $(document).ready(function() {
-	$.cookie('intro', '1', { expires: 1, domain: 'consultoriamassaguer.es' });
+	$.cookie('intro', '1', { expires: 1 });
 	$('.spanish').addClass("selected");
 	window.idioma="es/";
 	setTimeout(function(){
@@ -192,21 +193,21 @@ $('.english').click(function() {
 	$('.lang').removeClass("selected");
 	$('.english').addClass("selected");
 	window.idioma="en/";
-	$.cookie('lang', 'en', { expires: 1, domain: 'consultoriamassaguer.es' });
+	$.cookie('lang', 'en', { expires: 1 });
 });
 
 $('.spanish').click(function() {
 	$('.lang').removeClass("selected");
 	$('.spanish').addClass("selected");
 	window.idioma="es/";
-	$.cookie('lang', 'es', { expires: 1, domain: 'consultoriamassaguer.es' });
+	$.cookie('lang', 'es', { expires: 1 });
 });
 
 $('.catalan').click(function() {
 	$('.lang').removeClass("selected");
 	$('.catalan').addClass("selected");
 	window.idioma="ca/";
-	$.cookie('lang', 'ca', { expires: 1, domain: 'consultoriamassaguer.es' });
+	$.cookie('lang', 'ca', { expires: 1 });
 });
 
 setTimeout(function(){

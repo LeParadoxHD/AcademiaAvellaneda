@@ -286,3 +286,70 @@ input[type=reset] {
 input[type=submit]:hover, input[type=reset]:hover {
 	background: #2481a3;
 }
+
+ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-top: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #0071F2;:003E85;
+}
+
+ul li a:hover {
+	color: #012ABE;
+}
+
+li:after {
+	content: '';
+	position: relative;
+	display: block;
+	margin: auto;
+	height: 2px;
+	top: 2px;
+	left: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+li:hover:after {
+	width: 100%;
+	background: green;
+}
+
+.effect_underline:after {
+	content: '';
+	position: relative;
+	display: block;
+	margin: auto;
+	height: 2px;
+	top: 2px;
+	left: -170px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.effect_underline:hover:after {
+	width: 40%;
+	background: green;
+}
+
+.effect_underline_hobbie:after {
+	content: '';
+	position: relative;
+	display: block;
+	margin: auto;
+	height: 2px;
+	top: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .2s ease, background-color .2s ease;
+}
+.effect_underline_hobbie:hover:after {
+	width: 100%;
+	background: green;
+}

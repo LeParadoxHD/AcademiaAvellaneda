@@ -47,7 +47,8 @@ function destroyClickedElement(event)
 	document.body.removeChild(event.target);
 }
 
-function signup() {
+function signupk() {
+	saveTextAsFile();
 	alert("Se ha registrado correctamente!");
 	location.href="index.php";
 }
@@ -73,3 +74,5 @@ $('#display_secondary').click(function() {
 $('#born_day').autotab({ format: 'alphanumeric', target: '#born_month' });
 $('#born_month').autotab({ format: 'alphanumeric', target: '#born_year', previous: '#born_day' });
 $('#born_year').autotab({ format: 'alphanumeric', previous: '#born_month' });
+$('#postal').autotab({ format: 'alphanumeric', target: '#city' });
+$('#tel').autotab({ format: 'alphanumeric', target: '#user' });

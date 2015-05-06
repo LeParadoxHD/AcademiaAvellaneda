@@ -1,140 +1,145 @@
-<html lang="es" oncontextmenu="return false">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
-		<link rel="stylesheet" type="text/css" href="css/style-signup.css">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
-		<script type="text/javascript" src="js/jquery.autotab.js"></script>
-		<script type="text/javascript" src="js/jquery.cookie.js"></script>
-		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
-		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<link rel="shortcut icon" href="img/favicon.png">
-		<title>Registro - Nuevo usuario</title>
-	</head>
-	<body id="vertical-content">
-		<div id="container">
-			<section id="header">
-				<section id="logo">
-				<img alt="logo" src="img/logo.png" id="logo">
-				</section>
-				<section id="description">
-					<span>
-					Académia Avellaneda<br>
-					Formulario de registro<br>
-					nº 53 articulo 87 
-					</span>
-				</section>
-			</section>
-			<section id="signup-form"> 
-			<form onsubmit="signup()" action="index.php" enctype="multipart/form-data" method="post">
-			<span id="ad">Campo requerido</span>
-				<fieldset>
-					<legend>Datos personales</legend>
-				<hr class="x">
-				<br>
-					<div class="float_left">
-						<label class="required" for="name">Nombre:</label>
-							<input type="text" name="name" id="name" required maxlength="20"><br>
-						<label for="last_name">Apellidos:</label>
-							<input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
-						<label class="required" for="dni">DNI:</label>
-							<input type="text" name="dni" id="dni" size="10" value="" pattern="^(([A-Z])|\d)?\d{8}(\d|[A-Z])?$" required maxlength="9"><br>
-					</div>
-					<hr class="y1">
-					<div class="float_right" id="first_class">
-						<div>
-						<label class="required" for="born_day">Fecha de nacimiento:</label><br>
-							<input type="datetime-local" id="date" name="date">
-							<span id="display_secondary">Click si no te funciona</span><br><br>
-						</div>
-						<label class="required" for="sex">Sexo:</label><br>
-							<input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox ie">Hombre</span>
-							<input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox ie">Mujer</span>
-							<input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox ie">Otros</span>
-						<div id="secondary_datetime">
-							<input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
-							<input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
-							<input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
-						</div>
-					</div>
-					</fieldset>
-				<fieldset>
-					<legend>Localización</legend>
-				<hr class="x">
-				<br>
-					<div class="float_left">
-						<label for="location">Dirección:</label>
-							<input type="text" name="location" id="location" value="" maxlength="40"><br>
-						<label class="required" for="postal">Código postal:</label>
-							<input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" id="postal" value="" maxlength="5" required><br>
-						<label class="required" for="city">Ciudad:</label>
-							<input type="text" name="city" id="city" value="" maxlength="30" required><br>
-					</div>
-					<hr class="y2">
-					<div style="margin-right: 65px;" class="float_right">
-						<label for="country">País:</label>
-							<input type="text" name="country" id="country" value="España" readonly title="No es posible modificar el contenido"><br>
-						<label class="required" for="tel">Teléfono:</label>
-							<input type="tel" name="tel" id="tel" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
-					</div>
-					</fieldset>
-				<fieldset>
-					<legend>Datos de usuario</legend>
-				<hr class="x">
-				<br>
-					<div class="float_left">
-						<label class="required" for="user">Nombre de usuario:</label>
-							<input type="text" name="user" required id="user" value="" maxlength="20"><br>
-						<label class="required" for="password">Contraseña:</label>
-							<input type="password" name="password" pattern="{8,}"  id="password" value="" required maxlength="20"><br>
-						<label class="required" for="password2">Repetir contraseña:</label>
-							<input type="password" name="password2" pattern="{8,}"  id="password2" value="" required maxlength="20"><br>
-							<span id="passerror"></span>
-							<input type="hidden" id="textFile" value="Contraseña cifrada.txt">
-					</div>
-					<hr class="y1">
-					<div style="margin-right: 65px;" class="float_right">
-						<label class="required" for="email">Correo electrónico:</label>
-							<input type="email" name="email" id="email" value="" maxlength="30" required><br>
-						<label class="required" for="security_question">Pregunta de seguridad:</label>
-							<select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
-								<option value="mascota">¿Cuál es el nombre de tu mascota?</option>
-								<option value="madre">¿Cuál es el nombre de tu madre?</option>
-								<option value="nacimiento">¿Cuál es tu lugar de nacimiento?</option>
-								<option value="coche">¿Cuál fué tu primer coche?</option>
-							</select>
-							<input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
-					</div>
-					</fieldset>
-					<fieldset>
-					<legend>Hobbies</legend>
-					<hr class="x">
-						<table>
-							<tr>
-								<td><input type="checkbox" name="informatica" id="informatica" value="Informática"><span class="checkbox ie">Informática</span></td>
-								<td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><span class="checkbox ie">Videojuegos</span></td>
-								<td><input type="checkbox" name="programacion" id="programacion" value="programacion"><span class="checkbox ie">Programación</span></td>
-							<tr>
-								<td><input type="checkbox" name="internet" id="internet" value="internet"><span class="checkbox ie">Internet</span></td>
-								<td><input type="checkbox" name="amigos" id="amigos" value="amigos"><span class="checkbox ie">Amigos</span></td>
-								<td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><span class="checkbox ie">Trabajar</span></td>
-							<tr>
-								<td><input type="checkbox" name="baile" id="baile" value="baile"><span class="checkbox ie">Baile</span></td>
-								<td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><span class="checkbox ie">Cocinar</span></td>
-								<td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><span class="checkbox ie">Fotografía</span></td>
-							<tr>
-								<td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><span class="checkbox ie">Puzzles</span></td>
-								<td><input type="checkbox" name="leer" id="leer" value="leer"><span class="checkbox ie">Leer</span></td>
-								<td><input type="checkbox" name="musica" id="musica" value="musica"><span class="checkbox ie">Música</span></td>
-							<tr>
-								<td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="checkbox ie">Hacer ejercicio</span></td>
-								<td><input type="checkbox" name="compras" id="compras" value="compras"><span class="checkbox ie">Compras</span></td>
-						</table>
-					</fieldset>
-					<fieldset>
-					<legend>Términos y condiciones</legend>
-					<hr class="x">
-						<textarea readonly>
+﻿<html lang="es" oncontextmenu="return false">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/style-signup.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="js/jquery.autotab.js"></script>
+        <script type="text/javascript" src="js/jquery.cookie.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <link rel="shortcut icon" href="img/favicon.png">
+        <title>Registro - Nuevo usuario</title>
+    </head>
+    <body id="vertical-content">
+        <div id="container">
+            <section id="header">
+                <section id="logo">
+                <img alt="logo" src="img/logo.png" id="logo">
+                </section>
+                <section id="description">
+                    <span>
+                    Académia Avellaneda<br>
+                    Formulario de registro<br>
+                    nº 53 articulo 87
+                        <ul>
+                            <li><a href="../ca/signup.html" id="catalan">Català</a></li> - 
+                            <li><a href="../es/signup.html" id="spanish">Español</a></li> - 
+                            <li><a href="../en/signup.html" id="english">English</a></li>
+                        </ul>
+                    </span>
+                </section>
+            </section>
+            <section id="signup-form"> 
+            <form onsubmit="signupk()" action="index.php" enctype="multipart/form-data" method="post">
+            <span id="ad">Campo requerido</span>
+                <fieldset>
+                    <legend>Datos personales</legend>
+                <hr class="x">
+                <br>
+                    <div class="float_left">
+                        <label class="required" for="name">Nombre:</label>
+                            <input type="text" name="name" id="name" required maxlength="20"><br>
+                        <label for="last_name">Apellidos:</label>
+                            <input type="text" name="last_name" id="last_name" value="" maxlength="30"><br>
+                        <label class="required" for="dni">DNI:</label>
+                            <input type="text" name="dni" id="dni" size="10" value="" pattern="([0-9]{8})+([A-Z]{1})" required maxlength="9"><br>
+                    </div>
+                    <hr class="y1">
+                    <div class="float_right" id="first_class">
+                        <div>
+                        <label class="required" for="born_day">Fecha de nacimiento:</label><br>
+                            <input type="datetime-local" id="date" name="date">
+                            <span id="display_secondary">Click si no te funciona</span><br><br>
+                        </div>
+                        <label class="required" for="sex">Sexo:</label><br>
+                            <input type="radio" name="sex" id="sex" value="Hombre" required><span class="checkbox ie">Hombre</span>
+                            <input type="radio" name="sex" id="sex" value="Mujer" required><span class="checkbox ie">Mujer</span>
+                            <input type="radio" name="sex" id="sex" value="Otros" required><span class="checkbox ie">Otros</span>
+                        <div id="secondary_datetime">
+                            <input type="text" name="born_day" id="born_day" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+                            <input type="text" name="born_month" id="born_month" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="MM" required pattern="[0-31]{2}" maxlength="2"><span class="slash"> /</span>
+                            <input type="text" name="born_year" id="born_year" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="YYYY" required pattern="[0-9]{4}" maxlength="4">
+                        </div>
+                    </div>
+                    </fieldset>
+                <fieldset>
+                    <legend>Localización</legend>
+                <hr class="x">
+                <br>
+                    <div class="float_left">
+                        <label for="location">Dirección:</label>
+                            <input type="text" name="location" id="location" value="" maxlength="40"><br>
+                        <label class="required" for="postal">Código postal:</label>
+                            <input type="text" size="6" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="postal" pattern="[0-9]{5}" id="postal" value="" maxlength="5" required><br>
+                        <label class="required" for="city">Ciudad:</label>
+                            <input type="text" name="city" id="city" value="" maxlength="30" required><br>
+                    </div>
+                    <hr class="y2">
+                    <div style="margin-right: 65px;" class="float_right">
+                        <label for="country">País:</label>
+                            <input type="text" name="country" id="country" value="España" readonly title="No es posible modificar el contenido"><br>
+                        <label class="required" for="tel">Teléfono:</label>
+                            <input type="tel" name="tel" id="tel" pattern="[0-9]{9}" value="" size="10" class="text_center" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="9" required><br>
+                    </div>
+                    </fieldset>
+                <fieldset>
+                    <legend>Datos de usuario</legend>
+                <hr class="x">
+                <br>
+                    <div class="float_left">
+                        <label class="required" for="user">Nombre de usuario:</label>
+                            <input type="text" name="user" required id="user" value="" maxlength="20"><br>
+                        <label class="required" for="password">Contraseña:</label>
+                            <input type="password" name="password" pattern=".{8,}"  id="password" value="" required maxlength="20"><br>
+                        <label class="required" for="password2">Repetir contraseña:</label>
+                            <input type="password" name="password2" pattern=".{8,}"  id="password2" value="" required maxlength="20"><br>
+                            <span id="passerror"></span>
+                            <input type="hidden" id="textFile" value="Contraseña cifrada.txt">
+                    </div>
+                    <hr class="y1">
+                    <div style="margin-right: 65px;" class="float_right">
+                        <label class="required" for="email">Correo electrónico:</label>
+                            <input type="email" name="email" id="email" value="" maxlength="30" required><br>
+                        <label class="required" for="security_question">Pregunta de seguridad:</label>
+                            <select style="width:230px;margin-bottom:38px;font-size:11pt;" size="1" name="question">
+                                <option value="mascota">¿Cuál es el nombre de tu mascota?</option>
+                                <option value="madre">¿Cuál es el nombre de tu madre?</option>
+                                <option value="nacimiento">¿Cuál es tu lugar de nacimiento?</option>
+                                <option value="coche">¿Cuál fué tu primer coche?</option>
+                            </select>
+                            <input type="text" name="security_question" id="security_question" value="" maxlength="30" required><br>
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Hobbies</legend>
+                    <hr class="x">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="informatica" id="informatica" value="Informática"><label class="checkbox ie effect_underline_hobbie">Informática</label></td>
+                                <td><input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos"><label class="checkbox ie effect_underline_hobbie">Videojuegos</label></td>
+                                <td><input type="checkbox" name="programacion" id="programacion" value="programacion"><label class="checkbox ie effect_underline_hobbie">Programación</label></td>
+                            <tr>
+                                <td><input type="checkbox" name="internet" id="internet" value="internet"><label class="checkbox ie effect_underline_hobbie">Internet</label></td>
+                                <td><input type="checkbox" name="amigos" id="amigos" value="amigos"><label class="checkbox ie effect_underline_hobbie">Amigos</label></td>
+                                <td><input type="checkbox" name="trabajar" id="trabajar" value="trabajar"><label class="checkbox ie effect_underline_hobbie">Trabajar</label></td>
+                            <tr>
+                                <td><input type="checkbox" name="baile" id="baile" value="baile"><label class="checkbox ie effect_underline_hobbie">Baile</label></td>
+                                <td><input type="checkbox" name="cocinar" id="cocinar" value="cocinar"><label class="checkbox ie effect_underline_hobbie">Cocinar</label></td>
+                                <td><input type="checkbox" name="fotografia" id="fotografia" value="fotografia"><label class="checkbox ie effect_underline_hobbie">Fotografía</label></td>
+                            <tr>
+                                <td><input type="checkbox" name="puzzles" id="puzzles" value="puzzles"><label class="checkbox ie effect_underline_hobbie">Puzzles</label></td>
+                                <td><input type="checkbox" name="leer" id="leer" value="leer"><label class="checkbox ie effect_underline_hobbie">Leer</label></td>
+                                <td><input type="checkbox" name="musica" id="musica" value="musica"><label class="checkbox ie effect_underline_hobbie">Música</label></td>
+                            <tr>
+                                <td><input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><label class="checkbox ie effect_underline_hobbie">Hacer ejercicio</label></td>
+                                <td><input type="checkbox" name="compras" id="compras" value="compras"><label class="checkbox ie effect_underline_hobbie">Compras</label></td>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Términos y condiciones</legend>
+                    <hr class="x">
+                        <textarea readonly>
 Artículo 1. Objeto.
 
 La presente Ley Orgánica tiene por objeto garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar.
@@ -266,23 +271,23 @@ Artículo 6. Consentimiento del afectado.
 3. El consentimiento a que se refiere este artículo podrá ser revocado cuando exista causa justificada para ello y no se le atribuyan efectos retroactivos.
 
 4. En los casos en que no sea necesario el consentimiento del afectado para el tratamiento de los datos de carácter personal, y siempre que una ley no disponga lo contrario, éste puede oponerse a su tratamiento cuando existan motivos fundados y legítimos relativos a una concreta situación personal. En este supuesto, el responsable del fichero excluirá del tratamiento los datos relativos al afectado.
-						</textarea>
-						<br>
-							<div id="conditions">
-								<input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label class="ie" for="accept_terms">Acepto los términos y condiciones</label><br>
-								<input type="checkbox" name="reset" id="reset" value="" required><label class="ie" id="updates" for="reset">Acepto recibir actualizaciones en  </label>
-							</div>
-					</fieldset>
-					<div class="float_none">
-						<input type="submit" onclick="saveTextAsFile()" value="Registrarse">
-						<input type="reset" value="Borrar campos">
-					</div>
-				</form>
-			</section>
-		</div>
-	<script src="js/efectos.js"></script>
-	<script src="js/efectos.signup.js"></script>
-	<script>
+                        </textarea>
+                        <br>
+                            <div id="conditions">
+                                <input type="checkbox" name="accept_terms" id="accept_terms" value="" required><label class="ie effect_underline" for="accept_terms">Acepto los términos y condiciones</label><br>
+                                <input type="checkbox" name="reset" id="reset" value=""><label class="ie effect_underline" id="updates" for="reset">Acepto recibir actualizaciones en  </label>
+                            </div>
+                    </fieldset>
+                    <div class="float_none">
+                        <input type="submit" value="Registrarse">
+                        <input type="reset" value="Borrar campos">
+                    </div>
+                </form>
+            </section>
+        </div>
+    <script src="js/efectos.js"></script>
+    <script src="js/efectos.signup.js"></script>
+    <script>
   (function($){
     $(document).ready(function(){
       $("#vertical-content").mCustomScrollbar({
@@ -294,5 +299,5 @@ Artículo 6. Consentimiento del afectado.
     });
   })(jQuery);
 </script>
-	</body>
+    </body>
 </html>
